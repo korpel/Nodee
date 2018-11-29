@@ -6,8 +6,8 @@ const file = require('./simpleFile.js');
 
 var user = os.userInfo();
 
-var res = file.addNote;
-console.log(res)
+var res = file.addNote();
+console.log(res);
 
 //commenting out
 // fs.appendFileSync('greetings.txt', `Hello ${user.username}!`);
