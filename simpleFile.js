@@ -1,3 +1,9 @@
 console.log('my name is montana')
 
-module.exports.age = 25
+
+// anonymous function
+module.exports.addNote = () => {
+console.log('addNote')
+return 'New note'
+
+};
