@@ -9,7 +9,7 @@ var user = os.userInfo();
 var res = file.addNote();
 console.log(res);
 var num = file.add(1,2);
-console.log(num);
+console.log('result:',num);
 
 //commenting out
 // fs.appendFileSync('greetings.txt', `Hello ${user.username}!`);
