@@ -4,7 +4,7 @@ const fs = require('fs');
 const _ = require('lodash');
 const yargs = require('yargs');
 
-const file = require('./simpleFile.js');
+const note = require('./simpleFile.js');
 
 
 const argv = yargs.argv;
@@ -15,6 +15,7 @@ console.log('argv: ', argv);
 
 if (command === 'add') {
     console.log('adding new file');
+    note.addNote(argv.title, argv.body);
 } 
 else if (command === 'list') {
     console.log('list all nodes');
