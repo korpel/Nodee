@@ -16,7 +16,7 @@ var filteredArray = _.uniq(['An', 1, 'An',2,3,1,2]);
 console.log(filteredArray);
 
 console.log('an valeis true: '+_.isString(true));
-console.log('an valeis string: '_.isString('Tony'));
+console.log('an valeis string: '+_.isString('Tony'));
 
 //commenting out
 // fs.appendFileSync('greetings.txt', `Hello ${user.username}!`);
