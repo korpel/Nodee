@@ -4,7 +4,7 @@ const fs = require('fs');
 const _ = require('lodash');
 const yargs = require('yargs');
 
-const note = require('./simpleFile.js');
+const note = require('./notes.js');
 
 
 const argv = yargs.argv;
