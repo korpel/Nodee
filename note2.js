@@ -10,7 +10,6 @@ const note = require('./notes.js');
 const argv = yargs.argv;
 var command = process.argv[2];
 console.log('command: ', command);
-console.log('process: ',process.argv);
 console.log('argv: ', argv);
 
 if (command === 'add') {
@@ -20,10 +19,10 @@ else if (command === 'list') {
     note.getAll();
 }
 else if (command === 'read') {
-    console.log('Reading node');
+    note.getNote(argv.title);
 }
 else if (command === 'remove') {
-    console.log('Removing node');
+    note.removeNote(argv.title);
 }
 else {
     console.log('command not recognized');
