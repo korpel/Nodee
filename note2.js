@@ -6,4 +6,5 @@ const _ = require('lodash');
 const file = require('./simpleFile.js');
 
 
-console.log(process.argv);
+var command = process.argv[2];
+console.log('command: ', command);
