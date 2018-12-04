@@ -12,7 +12,7 @@ console.log(res);
 var num = file.add(1,2);
 console.log('result:',num);
 
-var filteredArray = _.uniq(['An', 1, 'An',2,3,1,2]);
+var filteredArray = _.uniq(['Antonis', 1, 'Antuan',2,3,1,2]);
 console.log(filteredArray);
 
 console.log('uniq an valeis true: '+_.isString(true));
