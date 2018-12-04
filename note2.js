@@ -8,6 +8,7 @@ const file = require('./simpleFile.js');
 
 var command = process.argv[2];
 console.log('command: ', command);
+console.log(process.argv);
 
 if (command === 'add') {
     console.log('adding new file');
