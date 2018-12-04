@@ -15,6 +15,12 @@ if (command === 'add') {
 else if (command === 'list') {
     console.log('list all nodes');
 }
+else if (command === 'read') {
+    console.log('Reading node');
+}
+else if (command === 'remove') {
+    console.log('Removing node');
+}
 else {
     console.log('command not recognized');
 }
