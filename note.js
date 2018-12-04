@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const os = require('os');
-const file = require('./simpleFile.js');
+const file = require('./notes.js');
 const _ = require('lodash');
 
 var user = os.userInfo();
