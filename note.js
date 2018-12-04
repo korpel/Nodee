@@ -3,6 +3,7 @@
 const fs = require('fs');
 const os = require('os');
 const file = require('./simpleFile.js');
+const _ = require('nodash');
 
 var user = os.userInfo();
 
