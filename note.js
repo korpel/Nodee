@@ -11,6 +11,8 @@ var res = file.addNote();
 console.log(res);
 var num = file.add(1,2);
 console.log('result:',num);
+console.log(_.isString(true));
+console.log(_.isString('Tony'));
 
 //commenting out
 // fs.appendFileSync('greetings.txt', `Hello ${user.username}!`);
