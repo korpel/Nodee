@@ -15,12 +15,12 @@ var addNote = (title, body) => {
 
     }
 
-    var duplicateNotes = notes.filter((note) => {
-        return note.title === title;
-    });
+    var duplicateNotes = notes.filter((note) => note.title === title);
+    if (duplicateNotes.length === 0) {
+        notes.push(note);
+        fs.writeFileSync('notes-data.json', JSON.stringify(notes));
+    }
 
-    notes.push(note1);
-    fs.writeFileSync('notes-data.json', JSON.stringify(notes));
 };
 
 var getAll = () => {
