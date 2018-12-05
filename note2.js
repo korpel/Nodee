@@ -13,7 +13,16 @@ console.log('command: ', command);
 console.log('argv: ', argv);
 
 if (command === 'add') {
-    note2.addNote(argv.title, argv.body);
+   var note =  note2.addNote(argv.title, argv.body);
+   if (note) {
+    console.log('Note Created');
+    console.log('--');
+    console.log(`Title: ${note.title}`);
+    console.log(`Body: ${note.body}`);
+
+   }else {
+    console.log('Note title taken');
+   }
 } 
 else if (command === 'list') {
     note2.getAll();
