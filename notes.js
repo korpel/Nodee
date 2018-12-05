@@ -14,6 +14,11 @@ var addNote = (title, body) => {
     }catch(e) {
 
     }
+
+    var duplicateNotes = notes.filter((note) => {
+        return note.title === title;
+    });
+
     notes.push(note1);
     fs.writeFileSync('notes-data.json', JSON.stringify(notes));
 };
