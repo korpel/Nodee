@@ -8,6 +8,7 @@ var addNote = (title, body) => {
         body
     };
     notes.push(note);
+    console.log(note);
     fs.writeFileSync('notes-data.json', JSON.stringify(notes));
 };
 

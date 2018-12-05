@@ -13,7 +13,13 @@ console.log('command: ', command);
 console.log('argv: ', argv);
 
 if (command === 'add') {
-    note.addNote(argv.title, argv.body);
+    var notes = [];
+    var note = {
+        title,
+        body
+    };
+    notes.push(note);
+    fs.writeFileSync('notes-data.json', JSON.stringify(notes));
 } 
 else if (command === 'list') {
     note.getAll();
