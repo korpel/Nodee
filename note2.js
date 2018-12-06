@@ -28,7 +28,15 @@ else if (command === 'list') {
     note2.getAll();
 }
 else if (command === 'read') {
-    note2.getNote(argv.title);
+   var note = note2.getNote(argv.title);
+   if (note) {
+    console.log('Note Found');
+    console.log('--');
+    console.log(`Title: ${note.title}`);
+    console.log(`Body: ${note.body}`);
+   } else {
+        console.log('Note not found');
+   }
 }
 else if (command === 'remove') {
    var noteRemoved = note2.removeNote(argv.title);
