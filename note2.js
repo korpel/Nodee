@@ -8,7 +8,7 @@ const note2 = require('./notes.js');
 
 
 const argv = yargs
-            .command('add', 'Add a new Node', {
+            .command('add', 'Add a new Note', {
                title: {
                   describe: 'Title of note',
                   demand: true,
@@ -21,10 +21,11 @@ const argv = yargs
                }
 
             })
-            .command('list','List a node')
-            .command('read','read a node',{
-               
+            .command('list','List a Note')
+            .command('read','Read a note',{
+
             })
+            .command('remove','Remove a node')
             .help()
             .argv;
 var command = argv._[0]
