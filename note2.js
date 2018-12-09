@@ -22,10 +22,12 @@ const argv = yargs
 
             })
             .command('list','List a Note')
-            .command('read','Read a note',{
+            .command('read','Read a Note',{
 
             })
-            .command('remove','Remove a node')
+            .command('remove','Remove a Note', {
+               
+            })
             .help()
             .argv;
 var command = argv._[0]
