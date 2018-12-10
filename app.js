@@ -32,4 +32,7 @@ request({
     else if (body.status === 'OK') {
     console.log(`Address: ${body.results[0].formatted_address} location: ${JSON.stringify(body.results[0].geometry.location)}`);
     }
+    else {
+        console.log('wtf');
+    }
 });
