@@ -15,7 +15,7 @@ const argv = yargs
     .alias('help', 'h')
     .argv;
     
-    var encodedAddress = encodeURIComponent(argv.a);
+    var encodedAddress = encodeURIComponent(argv.address);
 
 request({
     url:`https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyA2u2IBLLeNrzJjy02M2TLJETcjA_LUCwI&address=${encodedAddress}`,
