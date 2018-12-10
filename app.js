@@ -1,6 +1,9 @@
 
 var request = require('request');
 var yargs = require('yargs');
+var credentialsFile = require('./cred');
+
+var credentials = credentialsFile.cred
 
 const argv = yargs
     .options({
@@ -18,7 +21,7 @@ const argv = yargs
     var encodedAddress = encodeURIComponent(argv.address);
 
 request({
-    url:`https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyA2u2IBLLeNrzJjy02M2TLJETcjA_LUCwI&address=${encodedAddress}`,
+    url:`https://maps.googleapis.com/maps/api/geocode/json?key=${credentials}&address=${encodedAddress}`,
     json: true
 }, (error, response, body) => {
     if (error) {
