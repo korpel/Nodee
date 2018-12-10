@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/korpel/Node#readme",
   "dependencies": {
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "yargs": "^4.8.1"
   }
 }
