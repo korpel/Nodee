@@ -1,8 +1,9 @@
 const request = require('request');
-const credentialsFile = require('./cred.js');
+const credentialsFile = require('./cred.js ');
 
 
-function geocodeAddress (address){
+var geocodeAddress = (address) => {
+    var encodedAddress = encodeURIComponent(address);
 request({
     url:`https://maps.googleapis.com/maps/api/geocode/json?key=${credentials}&address=${encodedAddress}`,
     json: true
@@ -19,7 +20,7 @@ request({
         console.log('wtf');
     }
 });
-}
+};
 
 module.exports = {
     address
