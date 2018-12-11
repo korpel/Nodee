@@ -3,8 +3,8 @@ const credentialsFile = require('./cred');
 
 const credentials = credentialsFile.cred;
 
-var geocodeAddress = (address) => {
-    var encodedAddress = encodeURIComponent(address, callback);
+var geocodeAddress = (address, callback) => {
+    var encodedAddress = encodeURIComponent(address);
 request({
     url:`https://maps.googleapis.com/maps/api/geocode/json?key=${credentials}&address=${encodedAddress}`,
     json: true
@@ -13,10 +13,16 @@ request({
         callback('cannot connect to google server');
         console.log();
     } else if (body.status === 'ZERO_RESULTS') {
-        console.log('unable to find address');
+        callback('unable to find address');
     }
     else if (body.status === 'OK') {
-    console.log(`Address: ${body.results[0].formatted_address} location: ${JSON.stringify(body.results[0].geometry.location)}`);
+        callback(undefined, {
+            address: body.results[0].formatted_address,
+            latitude: body.results[0].geometry.location.lat,
+            longtitude: body.results[0].geometry.location.lng,
+            location: body.results[0].geometry.location
+
+        })
     }
     else {
         console.log('wtf');
