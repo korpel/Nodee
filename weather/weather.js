@@ -8,9 +8,14 @@ request({
 }, (error, response, body) => {
 
     if (!error & response.statusCode === 200) {
-        console.log(body.currently.temperature);
+       callback(undefined, {
+          temperature: body.currently.temperature,
+          apparentTemperature: body.currently.apparentTemperature
+          
+        });
+
     } else {
-        console.log('Unable to fetch weather');
+        callback('Unable to fetch weather');
     }
 
 });
