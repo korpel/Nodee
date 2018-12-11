@@ -1,5 +1,7 @@
 const request = require('request');
+const credentialsFile = require('./geocode/cred2');
 
+var getWeather = () => {
 request({
     url: 'to url moy'
     json: true
@@ -12,3 +14,8 @@ request({
     }
 
 });
+}
+
+module.exports = {
+    getWeather
+}
