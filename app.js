@@ -18,6 +18,8 @@ const argv = yargs
     .help()
     .alias('help', 'h')
     .argv;
+
+    geocode.geocodeAddress(argv.address);
     
     var encodedAddress = encodeURIComponent(argv.address);
 
