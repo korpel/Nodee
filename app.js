@@ -15,7 +15,4 @@ const argv = yargs
     .argv;
 
     geocode.geocodeAddress(argv.address);
-    
-    
-
 
