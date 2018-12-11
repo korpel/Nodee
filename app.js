@@ -1,7 +1,7 @@
 
-var request = require('request');
-var yargs = require('yargs');
-var credentialsFile = require('./cred');
+const request = require('request');
+const yargs = require('yargs');
+const credentialsFile = require('./cred');
 
 var credentials = credentialsFile.cred
 
