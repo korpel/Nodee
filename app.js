@@ -1,5 +1,3 @@
-
-const request = require('request');
 const yargs = require('yargs');
 const credentialsFile = require('./cred');
 const geocode = require('./geocode/geocode.js')
