@@ -16,6 +16,4 @@ request({
 });
 }
 
-module.exports = {
-    getWeather
-}
+module.exports.getWeather = getWeather
