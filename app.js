@@ -25,7 +25,8 @@ const argv = yargs
                 if(errorMessage) {
                     console.log(errorMessage);
                 } else {
-                    console.log(JSON.stringify(weatherResults, undefined, 2));
+                    console.log(`It's ${weatherResults.temperature}, but feels like ${weatherResults.apparentTemperature}.`)
+
                 }
             });
          }
