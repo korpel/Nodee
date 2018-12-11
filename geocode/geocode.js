@@ -1,5 +1,5 @@
 const request = require('request');
-const credentialsFile = require('./cred');
+const credentialsFile = require('./cred.js');
 
 
 function geocodeAddress (address){
