@@ -1,5 +1,6 @@
 const request = require('request');
 const credentialsFile = require('./cred.js ');
+var credentials = credentialsFile.cred;
 
 
 var geocodeAddress = (address) => {
@@ -23,5 +24,5 @@ request({
 };
 
 module.exports = {
-    address
+    geocodeAddress
 };
