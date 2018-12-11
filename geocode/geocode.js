@@ -1,5 +1,5 @@
 const request = require('request');
-const credentialsFile = require('./cred');
+const credentialsFile = require('./cred2');
 
 const credentials = credentialsFile.cred;
 
