@@ -1,9 +1,9 @@
 const request = require('request');
 const credentialsFile = require('./geocode/cred2');
 
-var getWeather = () => {
+var getWeather = (lat, lng, callback) => {
 request({
-    url: 'to url moy'
+    url: `https://api.darksky.net/forecast/${credentialsFile.weatherCred}/${lat},${lng}`
     json: true
 }, (error, response, body) => {
 
