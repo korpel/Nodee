@@ -1,7 +1,7 @@
 const request = require('request');
 const credentialsFile = require('./cred.js ');
-var credentials = credentialsFile.cred;
 
+const credentials = credentialsFile.cred;
 
 var geocodeAddress = (address) => {
     var encodedAddress = encodeURIComponent(address);
