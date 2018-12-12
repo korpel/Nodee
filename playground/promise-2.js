@@ -34,7 +34,7 @@ request({
     
 };
 
-geocodeAddress('19164').then((location) => {
+geocodeAddress('000000').then((location) => {
     console.log(JSON.stringify(location,undefined,2));
 }, (errorMessage) => {
     console.log(errorMessage);
