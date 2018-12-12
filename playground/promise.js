@@ -7,7 +7,7 @@ var somePromise = new Promise((resolve, reject)=> {
     }, 2500);
     setTimeout(()=> {
         reject('Unable to fulfill promise');
-    },2499);
+    },2500);
 
 });
 
