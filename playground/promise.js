@@ -2,7 +2,11 @@
 var asyncAdd =(a,b) => {
     return new Promise((resolve, reject)=> {
         setTimeout(()=>{
-
+            if (typeof a === 'number' && typeof b === 'number') {
+                resolve(a+b);
+            } else {
+                reject ('Need to have numbers');
+            }
         }, 1500);
     });
 };
