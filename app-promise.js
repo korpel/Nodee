@@ -1,4 +1,5 @@
 const yargs = require('yargs');
+const axios = require('axios');
 
 
 
@@ -14,3 +15,6 @@ const argv = yargs
     .help()
     .alias('help', 'h')
     .argv;
+
+
+    var encodedAddress = encodeURIComponent(address);
