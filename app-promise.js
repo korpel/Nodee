@@ -1,6 +1,9 @@
 const yargs = require('yargs');
 const axios = require('axios');
 
+const credentialsFile = require('./geocode/cred2');
+
+const credentials = credentialsFile.cred;
 
 
 const argv = yargs
@@ -17,4 +20,12 @@ const argv = yargs
     .argv;
 
 
-    var encodedAddress = encodeURIComponent(address);
+    var encodedAddress = encodeURIComponent(argv.address);
+    var geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?key=${credentials}&address=${encodedAddress}`;
+    
+    axios.get(geocodeUrl).then((response)=>{
+        console.log(response.data);
+    }).catch((a) => {
+        console.log(e);
+    });
+
