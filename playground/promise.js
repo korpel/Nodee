@@ -1,5 +1,11 @@
 
+var asyncAdd =(a,b) => {
+    return new Promise((resolve, reject)=> {
+        setTimeout(()=>{
 
+        }, 1500);
+    });
+};
 
 var somePromise = new Promise((resolve, reject)=> {
     setTimeout(()=>{
