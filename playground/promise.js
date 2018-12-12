@@ -19,7 +19,7 @@ asyncAdd(1,true).then((res)=> {
 }).then((res)=>{
     console.log('new number', res);
 }, (errorMessage)=> {
-    console.log('failed', errorMessage);
+    console.log(errorMessage);
 });
 
 // var somePromise = new Promise((resolve, reject)=> {
