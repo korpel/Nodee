@@ -13,7 +13,7 @@ var asyncAdd =(a,b) => {
 
 asyncAdd(1,3).then((res)=> {
     console.log('results:',res);
-    return asyncAdd(res, 10);
+    return asyncAdd(res, '30');
 }, (errorMessage)=>{
     console.log('failed:', errorMessage);
 }).then((res)=>{
