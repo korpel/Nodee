@@ -21,11 +21,14 @@ const argv = yargs
 
 
     var encodedAddress = encodeURIComponent(argv.address);
-    var geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?key=${credentials}&address=${encodedAddress}`;
+    var geocodeUrl = `https://mapsgoogleapis.com/maps/api/geocode/json?key=${credentials}&address=${encodedAddress}`;
     
     axios.get(geocodeUrl).then((response)=>{
         console.log(response.data);
-    }).catch((a) => {
+    }).catch((e) => {
+        if (e.code ==='ENOTFOUND') {
+            console.log('unable to have access to the servers');
+        }
         console.log(e);
     });
 
