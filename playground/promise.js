@@ -11,7 +11,7 @@ var asyncAdd =(a,b) => {
     });
 };
 
-asyncAdd(1,true).then((res)=> {
+asyncAdd(1,3).then((res)=> {
     console.log('results:',res);
     return asyncAdd(res, 10);
 }, (errorMessage)=>{
