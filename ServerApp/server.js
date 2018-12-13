@@ -13,6 +13,7 @@ app.get('/', (req, res) => {
     welcomeMessage: 'Welcome to my home page',
     currentTime:  new Date().getHours(),
     currentMinutes: new Date().getMinutes(),
+    currentSec: new Date().getSeconds(),
     currentMilliSec: new Date().getMilliseconds()
    });
 })
