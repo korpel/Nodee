@@ -4,6 +4,7 @@ const hbs = require('hbs';)
 
 var app = express();
 
+app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/Public'))
 app.get('/', (req, res) => {
     // res.send('<h1>Hello express<\h1>');
