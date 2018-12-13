@@ -27,8 +27,7 @@ const argv = yargs
         console.log(response.data);
     }).catch((e) => {
         if (e.code ==='ENOTFOUND') {
-            console.log('unable to have access to the servers');
+            console.log('unable to have access to the servers')
         }
-        console.log(e);
     });
 
