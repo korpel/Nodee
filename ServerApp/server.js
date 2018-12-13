@@ -7,13 +7,11 @@ var app = express();
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/Public'))
 app.get('/', (req, res) => {
-    // res.send('<h1>Hello express<\h1>');
-    res.send({
-        name : 'Ant',
-        likes : [
-            'biking', 'running', 'fun'
-        ]
-    });
+   res.render('home.hbs', {
+    pageTitle: 'Home Page with render',
+    currentYear: new Date().getFullYear(),
+    welcomeMessage: 'Welcome to my home page'
+   });
 })
 
 app.get('/about', (req, res) => {
