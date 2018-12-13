@@ -11,7 +11,9 @@ app.get('/', (req, res) => {
     pageTitle: 'Home Page with render',
     currentYear: new Date().getFullYear(),
     welcomeMessage: 'Welcome to my home page',
-    currentTime: new Date().getHours()
+    currentTime:  new Date().getHours(),
+    currentMinutes: new Date().getMinutes()
+    currentMiliSec: new Date().getMilliseconds
    });
 })
 
