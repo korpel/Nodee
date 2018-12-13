@@ -1,7 +1,7 @@
 const yargs = require('yargs');
 const axios = require('axios');
 
-const credentialsFile = require('./geocode/cred2');
+const credentialsFile = require('../geocode/cred2');
 
 const credentials = credentialsFile.cred;
 const credentialsW = credentialsFile.weatherCred;
