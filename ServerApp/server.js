@@ -10,7 +10,8 @@ app.get('/', (req, res) => {
    res.render('home.hbs', {
     pageTitle: 'Home Page with render',
     currentYear: new Date().getFullYear(),
-    welcomeMessage: 'Welcome to my home page'
+    welcomeMessage: 'Welcome to my home page',
+    currentTime: new Date().getHours()
    });
 })
 
