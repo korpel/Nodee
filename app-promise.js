@@ -30,9 +30,14 @@ const argv = yargs
         }
         var lat = response.data.results[0].geometry.location.lat;
         var lng = response.data.results[0].geometry.location.lng;
-        var url = `https://api.darksky.net/forecast/${credentialsW}/${lat},${lng}`;
+        var weatherUrl = `https://api.darksky.net/forecast/${credentialsW}/${lat},${lng}`;
 
         console.log(response.data.results[0].formatted_address);
+        return axios.get(weatherUrl);
+    }).then((response)=>{
+        var temperature = response.data.currently.temperature;
+        var apparentTemperature = response.data.currently.apparentTemperature;
+        console.log(`It's ${temperature} degrees but feels like ${apparentTemperature}.`);
     }).catch((e) => {
         if (e.code ==='ENOTFOUND') {
             console.log('unable to have access to the servers')
