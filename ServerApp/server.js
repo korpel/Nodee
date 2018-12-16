@@ -29,7 +29,7 @@ next();
 });
 
 app.use((req,res,next)=> {
-    app.render('maintance.hbs');
+    res.render('maintanance.hbs');
 });
 
 app.get('/', (req, res) => {
