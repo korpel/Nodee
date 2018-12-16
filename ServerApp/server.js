@@ -16,7 +16,7 @@ app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/Public'))
 
 app.use((req,res,next)=> {
-
+next();
 });
 
 app.get('/', (req, res) => {
