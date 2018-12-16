@@ -28,6 +28,10 @@ app.use((req,res,next)=> {
 next();
 });
 
+app.use((req,res,next)=> {
+    app.render('maintance.hbs');
+});
+
 app.get('/', (req, res) => {
    res.render('home.hbs', {
     pageTitle: 'Home Page with render',
