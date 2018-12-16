@@ -14,6 +14,11 @@ hbs.registerHelper('screamIt', (text)=>{
 
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/Public'))
+
+app.use((req,res,next)=> {
+
+});
+
 app.get('/', (req, res) => {
    res.render('home.hbs', {
     pageTitle: 'Home Page with render',
