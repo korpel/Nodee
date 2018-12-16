@@ -1,6 +1,7 @@
 
 const express = require('express');
 const hbs = require('hbs');
+const fs = require('fs');
 
 var app = express();
 
@@ -17,7 +18,8 @@ app.use(express.static(__dirname + '/Public'))
 
 app.use((req,res,next)=> {
     var now = new Date().toString();
-    console.log(`${now}: ${req.method} ${req.url}`);
+    var log = `${now}: ${req.method} ${req.url}`;
+    console.log();
 next();
 });
 
