@@ -5,13 +5,15 @@ const hbs = require('hbs');
 var app = express();
 
 hbs.registerPartials(__dirname + '/views/partials');
+hbs.registerHelper('getCurrentYear', ()=>{
+return newDate().getFullYear
+});
 
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/Public'))
 app.get('/', (req, res) => {
    res.render('home.hbs', {
     pageTitle: 'Home Page with render',
-    currentYear: new Date().getFullYear(),
     welcomeMessage: 'Welcome to my home page',
     currentTime:  new Date().getHours(),
     currentMinutes: new Date().getMinutes(),
@@ -23,7 +25,6 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
         pageTitle: 'About Page with render',
-        currentYear: new Date().getFullYear()
     });
 });
 
