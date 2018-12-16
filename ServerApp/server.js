@@ -16,6 +16,7 @@ app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/Public'))
 
 app.use((req,res,next)=> {
+    var now = new Date().toString();
 next();
 });
 
