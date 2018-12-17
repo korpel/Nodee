@@ -15,6 +15,7 @@ hbs.registerHelper('screamIt', (text)=>{
     return text.toUpperCase()
 });
 
+
 app.set('view engine', 'hbs');
 
 app.use((req,res,next)=> {
@@ -55,7 +56,8 @@ app.get('/about', (req, res) => {
 
 pp.get('/project', (req, res) => {
     res.render('project.hbs', {
-        pageTitle: 'About Page with render'
+        pageTitle: 'About Page with render',
+        portfolioMessage : 'Welcome to portfolio'
     });
 });
 
