@@ -5,6 +5,8 @@ const fs = require('fs');
 
 var app = express();
 
+var port = process.env
+
 hbs.registerPartials(__dirname + '/views/partials');
 hbs.registerHelper('getCurrentYear', ()=>{
 return new Date().getFullYear()
