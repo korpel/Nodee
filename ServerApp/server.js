@@ -61,6 +61,6 @@ app.get('/bad', (req,res) => {
 });
 
 
-app.listen(3000, () =>{
-    console.log('server is up and running');
+app.listen(port, () =>{
+    console.log(`server is up and running in port ${port}`);
 });
