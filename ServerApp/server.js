@@ -53,6 +53,11 @@ app.get('/about', (req, res) => {
     });
 });
 
+pp.get('/project', (req, res) => {
+    res.render('project.hbs', {
+        pageTitle: 'About Page with render'
+    });
+});
 
 app.get('/bad', (req,res) => {
     res.send({
