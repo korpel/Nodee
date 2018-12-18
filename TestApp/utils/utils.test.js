@@ -27,5 +27,10 @@ it('Should expect some values', () => {
     // expect({name:'Tony'}).toNotEqual({name:'tony'});
     // expect([2,3,4]).toInclude(2);
     // expect([2,3,4]).toExclude(5);
+    expect({
+        name: 'tony',
+        age: 25,
+        location: 'volos'
+    })
 
 });
