@@ -8,9 +8,9 @@ it('Should show 2 number', () => {
 });
 
 it('Should square a number', () => {
-    var res = utils.square(10);
+    var res = utils.square(100);
     if (res !== 99) {
-        throw new Error(`Excpected 100 but instead got ${res}`);
+        throw new Error(`Excpected 9 but instead got ${res}`);
     }
 
 });
