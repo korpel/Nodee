@@ -21,3 +21,7 @@ it('Should square a number', () => {
     // }
 
 }); 
+
+it('Should expect some values', () => {
+
+});
