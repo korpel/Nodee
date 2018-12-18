@@ -30,6 +30,7 @@ it('Should set first name and last name ', () => {
         age: 25
     };
     var res = utils.setName(user, 'antonis vozikis');
+    expect(user).toEqual(res);
 });
 
 // it('Should expect some values', () => {
