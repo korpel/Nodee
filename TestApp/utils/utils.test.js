@@ -29,11 +29,11 @@ it('Should set first name and last name ', () => {
         location: 'volos',
         age: 25
     };
-    var res = utils.setName(user, 'antonis vozikis');
+    var res = utils.setName(user, 'Antonis Vozikis');
     expect(user).toEqual(res);
     expect(user).toInclude({
-        firstName: 'antonis', 
-        lastName:'vozikis'
+        firstName: 'Antonis', 
+        lastName:'Vozikis'
     });
 });
 
