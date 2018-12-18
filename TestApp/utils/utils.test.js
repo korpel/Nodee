@@ -31,6 +31,8 @@ it('Should expect some values', () => {
         name: 'tony',
         age: 25,
         location: 'volos'
+    }).toInclude({
+        age:25
     })
 
 });
