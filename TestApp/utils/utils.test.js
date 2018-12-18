@@ -29,7 +29,7 @@ it('Should set first name and last name ', () => {
         location: 'volos',
         age: 25
     };
-    var res utils.setName(user, 'antonis vozikis');
+    var res = utils.setName(user, 'antonis vozikis');
 });
 
 // it('Should expect some values', () => {
