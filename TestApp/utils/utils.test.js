@@ -16,4 +16,4 @@ it('Should square a number', () => {
         throw new Error(`Excpected 100 but instead got ${res}`);
     }
 
-});
+}); 
