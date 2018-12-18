@@ -2,7 +2,7 @@ const utils = require('./utils');
 const expect = require('expect');
 
 it('Should show 2 number', () => {
-    var res = utils.add(33,11);
+    var res = utils.add(32,11);
 
     expect(res).toBe(44);
     // if (res !== 44) {
