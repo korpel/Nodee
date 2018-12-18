@@ -25,7 +25,7 @@ it('Should square a number', () => {
 it('Should expect some values', () => {
     // expect(12).toNotBe(12);
     // expect({name:'Tony'}).toNotEqual({name:'tony'});
-    expect([2,3,4]).toInclude(2);
-    expect([2,3,4]).toExclude(5);
+    // expect([2,3,4]).toInclude(2);
+    // expect([2,3,4]).toExclude(5);
 
 });
