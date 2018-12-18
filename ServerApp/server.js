@@ -4,7 +4,7 @@ const hbs = require('hbs');
 const fs = require('fs');
 
 var app = express();
-var name = 'asd';
+
 
 
 const port = process.env.PORT || 3000;
