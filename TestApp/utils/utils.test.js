@@ -11,10 +11,11 @@ it('Should show 2 number', () => {
     // }
 });
 
-it('Should add 2 number', () => {
+it('Should add 2 number', (done) => {
 
     utils.asyncAdd(3, 4, (sum) => {
-        expect(sum).toBe(10).toBeA('number');
+        expect(sum).toBe(7).toBeA('number');
+        done();
     });
 
 });
