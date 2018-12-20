@@ -15,4 +15,7 @@ describe('App', () => {
         spy('Tony',25);
         expect(spy).toHaveBeenCalledWith('Tony', 25);
     });
+
+    it('Should call saveUser')
+
 });
