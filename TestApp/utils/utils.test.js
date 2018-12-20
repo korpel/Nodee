@@ -2,7 +2,7 @@ const utils = require('./utils');
 const expect = require('expect');
 
 
-describe('utils', () => {
+describe('Utils', () => {
     it('Should show 2 number', () => {
         var res = utils.add(33,11);
     
@@ -39,6 +39,7 @@ describe('utils', () => {
            done();
         });
     });
+
 });
 
 
