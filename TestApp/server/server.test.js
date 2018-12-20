@@ -16,5 +16,10 @@ it('should return hello world response', (done) => {
 });
 
 it('Should return my user object', (done) => {
-
+    request(app)
+    .get('/users')
+    .expect(200)
+    .expect((res) => {
+        
+    })
 });
