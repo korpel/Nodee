@@ -5,7 +5,12 @@ var app = require('./server').app;
 
 
 describe('Server', () => {
+    describe('/', ()=> {
 
+    });
+    describe('/', ()=> {
+
+    });
 });
 
 it('should return hello world response', (done) => {
