@@ -19,6 +19,8 @@ describe('App', () => {
     it('Should call saveUser with user Object', () => {
         var email = 'ant@example.com'
         var password = '123abc';
+
+        app.handleSignup(email,password);
     });
 
 });
