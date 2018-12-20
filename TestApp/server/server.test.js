@@ -7,6 +7,8 @@ it('should return hello world response', (done) => {
     request(app)
     .get('/')
     .expect(404)
-    .expect()
+    .expect((res)=> {
+        
+    })
     .end(done);
 });
