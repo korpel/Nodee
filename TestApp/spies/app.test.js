@@ -1,5 +1,7 @@
 const expect = require('expect');
 
+const rewire = require('rewire');
+
 
 describe('App', () => {
     it('should call the spy correctly', ()=>{
