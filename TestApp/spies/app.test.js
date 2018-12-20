@@ -22,7 +22,7 @@ describe('App', () => {
 
         app.handleSignup(email,password); 
         expect(db.saveUser).toHaveBeenCalledWith({
-
+            email, password
         });
     });
 
