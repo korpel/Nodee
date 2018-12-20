@@ -31,8 +31,11 @@ it('Should square a number', () => {
 
 }); 
 
-it('Should ssquare a number', () => {
-
+it('Should ssquare a number', (done) => {
+    utils.asyncSquare(3, (sum) => {
+       expect(sum).toBe(9).toBeA('number'); 
+    });
+    done();
 });
 
 
