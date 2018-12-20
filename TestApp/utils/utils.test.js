@@ -31,6 +31,10 @@ it('Should square a number', () => {
 
 }); 
 
+it('Should ssquare a number', () => {
+
+});
+
 
 
 it('Should set first name and last name ', () => {
