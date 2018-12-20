@@ -14,3 +14,7 @@ it('should return hello world response', (done) => {
     })
     .end(done);
 });
+
+it('Should return my user object', (done) => {
+
+});
