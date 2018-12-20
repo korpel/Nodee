@@ -18,7 +18,7 @@ describe('Server', () => {
             .end(done);
         });
     });
-    describe('GET /Users', ()=> {
+    describe('GET /users', ()=> {
         it('Should return my user object', (done) => {
             request(app)
             .get('/users')
