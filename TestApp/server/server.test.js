@@ -3,6 +3,11 @@ const expect = require('expect');
 
 var app = require('./server').app;
 
+
+describe('Server', () => {
+
+});
+
 it('should return hello world response', (done) => {
     request(app)
     .get('/')
