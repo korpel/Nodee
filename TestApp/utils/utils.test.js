@@ -1,42 +1,47 @@
 const utils = require('./utils');
 const expect = require('expect');
 
-it('Should show 2 number', () => {
-    var res = utils.add(33,11);
 
-    expect(res).toBe(44).toBeA('number');
-
-    // if (res !== 44) {
-    // throw new Error(`Excpected 44 but got ${res}`);
-    // }
-});
-
-it('Should add 2 number', (done) => {
-
-    utils.asyncAdd(3, 4, (sum) => {
-        expect(sum).toBe(7).toBeA('number');
-        done();
+describe('utils', () => {
+    it('Should show 2 number', () => {
+        var res = utils.add(33,11);
+    
+        expect(res).toBe(44).toBeA('number');
+    
+        // if (res !== 44) {
+        // throw new Error(`Excpected 44 but got ${res}`);
+        // }
     });
-
-});
-
-it('Should square a number', () => {
-    var res = utils.square(10);
-
-    expect(res).toBe(100).toBeA('number');
-
-    // if (res !== 100) {
-    //     throw new Error(`Excpected 100 but instead got ${res}`);
-    // }
-
-}); 
-
-it('Should ssquare a number', (done) => {
-    utils.asyncSquare(3, (res) => {
-       expect(res).toBe(9).toBeA('number'); 
-       done();
+    
+    it('Should add 2 number', (done) => {
+    
+        utils.asyncAdd(3, 4, (sum) => {
+            expect(sum).toBe(7).toBeA('number');
+            done();
+        });
+    
+    });
+    
+    it('Should square a number', () => {
+        var res = utils.square(10);
+    
+        expect(res).toBe(100).toBeA('number');
+    
+        // if (res !== 100) {
+        //     throw new Error(`Excpected 100 but instead got ${res}`);
+        // }
+    
+    }); 
+    
+    it('Should ssquare a number', (done) => {
+        utils.asyncSquare(3, (res) => {
+           expect(res).toBe(9).toBeA('number'); 
+           done();
+        });
     });
 });
+
+
 
 
 
