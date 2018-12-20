@@ -12,7 +12,7 @@ module.exports.square = (x) => x*x;
 module.exports.asyncSquare = (x, callback) => {
     setTimeout(() => {
         callback(x*x)
-    },1000);
+    },1000) ;
 };
 
 module.exports.setName = (user, fullName) => {
