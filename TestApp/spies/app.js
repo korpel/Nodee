@@ -1,5 +1,5 @@
 
 
-module.exports.handleSignup = (email,pass) => {
+module.exports.handleSignup = (email,password) => {
 
 };
