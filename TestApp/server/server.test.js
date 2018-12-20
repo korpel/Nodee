@@ -6,4 +6,5 @@ it('should return hello world response', (done) => {
     request(app)
     .get('/')
     .expect('Hello World')
+    .end(done);
 });
