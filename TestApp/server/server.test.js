@@ -8,7 +8,9 @@ it('should return hello world response', (done) => {
     .get('/')
     .expect(404)
     .expect((res)=> {
-        
+        expect(res.body).toInclude({
+            error: 'Page not Found!'
+        });
     })
     .end(done);
 });
