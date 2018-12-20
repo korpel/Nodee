@@ -5,7 +5,7 @@ var app = require('./server').app;
 
 
 describe('Server', () => {
-    describe('/', ()=> {
+    describe('GET /', ()=> {
         it('should return hello world response', (done) => {
             request(app)
             .get('/')
@@ -18,7 +18,7 @@ describe('Server', () => {
             .end(done);
         });
     });
-    describe('/Users', ()=> {
+    describe('GET /Users', ()=> {
         it('Should return my user object', (done) => {
             request(app)
             .get('/users')
