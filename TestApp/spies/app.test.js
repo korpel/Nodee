@@ -20,7 +20,10 @@ describe('App', () => {
         var email = 'ant@example.com'
         var password = '123abc';
 
-        app.handleSignup(email,password);
+        app.handleSignup(email,password); 
+        expect(db.saveUser).toHaveBeenCalledWith({
+            
+        })
     });
 
 });
