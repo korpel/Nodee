@@ -1,4 +1,4 @@
 
 module.exports.saveUser = (user) => {
-    console.log(user);
+    console.log('Saving the user',user);
 };
