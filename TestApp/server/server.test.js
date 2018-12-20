@@ -21,7 +21,8 @@ it('Should return my user object', (done) => {
     .expect(200)
     .expect((res) => {
         expect(res.body).toInclude({
-            name: 'Tony'
+            name: 'Tony',
+            age: 265
         });
     })
     .end(done);
