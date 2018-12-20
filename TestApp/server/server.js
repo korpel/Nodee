@@ -10,6 +10,10 @@ app.get('/', (req,res) => {
     });
 });
 
+app.get('/users', (req, res) => {
+
+});
+
 app.listen(3000);
 
 module.exports.app = app;
