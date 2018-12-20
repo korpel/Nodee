@@ -20,7 +20,7 @@ app.get('/users', (req, res) => {
     }, {
         name: 'Tony',
         age:265
-    })
+    });
 });
 
 app.listen(3000);
