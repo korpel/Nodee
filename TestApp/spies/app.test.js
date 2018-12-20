@@ -21,9 +21,7 @@ describe('App', () => {
         var password = '123abc';
 
         app.handleSignup(email,password); 
-        expect(db.saveUser).toHaveBeenCalledWith({
-            email, password
-        });
+        expect(db.saveUser).toHaveBeenCalledWith({email, password });
     });
 
 });
