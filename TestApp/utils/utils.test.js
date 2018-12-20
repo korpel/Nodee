@@ -3,15 +3,18 @@ const expect = require('expect');
 
 
 describe('Utils', () => {
-    it('Should show 2 number', () => {
-        var res = utils.add(33,11);
-    
-        expect(res).toBe(44).toBeA('number');
-    
-        // if (res !== 44) {
-        // throw new Error(`Excpected 44 but got ${res}`);
-        // }
+    describe('#add', () => {
+        it('Should show 2 number', () => {
+            var res = utils.add(33,11);
+        
+            expect(res).toBe(44).toBeA('number');
+        
+            // if (res !== 44) {
+            // throw new Error(`Excpected 44 but got ${res}`);
+            // }
+        });
     });
+
     
     it('Should add 2 number', (done) => {
     
