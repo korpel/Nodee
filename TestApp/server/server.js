@@ -11,7 +11,7 @@ app.get('/', (req,res) => {
 });
 
 app.get('/users', (req, res) => {
-    res.send({
+    res.send([{
         name: 'Mike',
         age: 27
     }, {
@@ -20,7 +20,7 @@ app.get('/users', (req, res) => {
     }, {
         name: 'Tony',
         age:265
-    });
+    }]);
 });
 
 app.listen(3000);
