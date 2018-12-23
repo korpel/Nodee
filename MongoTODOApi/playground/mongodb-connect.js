@@ -9,8 +9,13 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     console.log('Connected to the server');
 
     db.collection('Todos').insertOne({
-        text: 'Something to do'
-    }()=>{})
+        text: 'Something to do',
+        completed: false
+    },(err, results) => {
+        if (err) {
+            console.log('Unable to insert Todos');
+        }
+    });
 
     db.close();
 });
