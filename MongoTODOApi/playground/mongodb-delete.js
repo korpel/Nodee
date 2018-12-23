@@ -9,7 +9,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     }
     console.log('Connected to the server');
 
-    
+    db.collection('Todos').deleteMany({text: 'Eat lunch'})
 
     // db.close();
 });
