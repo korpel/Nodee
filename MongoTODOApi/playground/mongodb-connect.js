@@ -1,6 +1,6 @@
 // const MongoClient = require('mongodb').MongoClient;
 
-const MongoClient = require('mongodb').MongoClient;
+const {MongoClient} = require('mongodb');
 
 
 var user = {name : 'Antonis', age: 25};
