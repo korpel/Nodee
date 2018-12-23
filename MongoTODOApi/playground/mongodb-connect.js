@@ -2,4 +2,4 @@
 const MongoClient = require('mongodb').MongoClient;
 
 
-MongoClient.connect();
+MongoClient.connect('mongodb://localhost:27017/TodoApp');
