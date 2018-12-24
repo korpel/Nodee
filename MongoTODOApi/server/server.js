@@ -22,7 +22,7 @@ var Todo = mongoose.model('Todo', {
 
 
 var newTodo = new Todo({
-    text: false
+    text: 'Some proper string'
 }); 
 
 // var newTodo2 = new Todo({
