@@ -37,7 +37,7 @@ var user = new User({
 user.save().then((doc)=>{
     console.log('User saved', doc);
 }, (e)=> {
-
+    console.log('Unable to save user', e);
 });
 
 // var newTodo = new Todo({
