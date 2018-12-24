@@ -24,7 +24,7 @@ var newTodo = new Todo({
 var newTodo2 = new Todo({
     text: 'do laundry',
     completed: false
-})
+});
 
 newTodo.save().then((doc)=> {
     console.log('Saved todo', doc);
