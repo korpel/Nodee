@@ -21,5 +21,9 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     //     console.log(result);
     // });
 
+    db.collection('Users').findOneAndUpdate({
+        _id: new ObjectID('5c1fad3a55b548e60d52fcc9')
+    })
+
     // db.close();
 });
