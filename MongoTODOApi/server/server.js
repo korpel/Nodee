@@ -22,8 +22,8 @@ var newTodo = new Todo({
 }); 
 
 var newTodo2 = new Todo({
-    text
-    
+    text: 'do laundry',
+    completed: false
 })
 
 newTodo.save().then((doc)=> {
