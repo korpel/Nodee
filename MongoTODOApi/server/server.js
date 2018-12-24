@@ -24,5 +24,5 @@ var newTodo = new Todo({
 newTodo.save().then(()=> {
 
 }, (err) => {
-
+    console.log('Unable to save todo');
 });
