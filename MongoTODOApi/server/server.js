@@ -34,7 +34,11 @@ var user = new User({
 
 });
 
-user.save()
+user.save().then((doc)=>{
+    console.log('User saved', doc);
+}, (e)=> {
+
+});
 
 // var newTodo = new Todo({
 //     text: 'Some proper string'
