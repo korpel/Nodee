@@ -23,7 +23,8 @@ var newTodo = new Todo({
 
 var newTodo2 = new Todo({
     text: 'do laundry',
-    completed: false
+    completed: false,
+    completedAt : 12
 });
 
 newTodo.save().then((doc)=> {
