@@ -31,3 +31,9 @@ newTodo.save().then((doc)=> {
 }, (err) => {
     console.log('Unable to save todo');
 });
+
+newTodo2.save().then((doc)=> {
+    console.log('Saved todo 2', doc);
+}, (err)=> {
+    console.log('Unable to save todo 2');
+});
