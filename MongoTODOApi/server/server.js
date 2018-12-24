@@ -21,7 +21,7 @@ var Todo = mongoose.model('Todo', {
 
 
 var newTodo = new Todo({
-    text: 'Edit this video'
+    text: '   Edit this video   '
 }); 
 
 // var newTodo2 = new Todo({
