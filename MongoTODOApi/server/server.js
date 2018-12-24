@@ -21,6 +21,11 @@ var newTodo = new Todo({
     text: 'cook dinner'
 }); 
 
+var newTodo2 = new Todo({
+    text
+    
+})
+
 newTodo.save().then((doc)=> {
     console.log('Saved todo', doc);
 }, (err) => {
