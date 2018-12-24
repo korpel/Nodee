@@ -11,7 +11,7 @@ var app = express();
 app.use(bodyParser.json());
 
 app.post('/todos', (req, res) => {
-
+    console.log(req.body);
 });
 
 
