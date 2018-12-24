@@ -30,6 +30,12 @@ var User = mongoose.model('Users', {
 });
 
 
+var user = new User({
+
+});
+
+user.save()
+
 // var newTodo = new Todo({
 //     text: 'Some proper string'
 // }); 
