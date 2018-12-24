@@ -31,7 +31,7 @@ var User = mongoose.model('Users', {
 
 
 var user = new User({
-
+    email: 'vozikis1@gmail.com     '
 });
 
 user.save().then((doc)=>{
