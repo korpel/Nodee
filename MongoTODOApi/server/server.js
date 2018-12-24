@@ -20,7 +20,7 @@ var Todo = mongoose.model('Todo', {
 
 
 var newTodo = new Todo({
-    text: 'a'
+    text: ''
 }); 
 
 // var newTodo2 = new Todo({
