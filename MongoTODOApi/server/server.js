@@ -20,6 +20,14 @@ var Todo = mongoose.model('Todo', {
     }
 });
 
+var User = mongoose.model('Users', {
+    email : {
+        type: String,
+        required: true,
+        minlength
+    }
+});
+
 
 var newTodo = new Todo({
     text: 'Some proper string'
