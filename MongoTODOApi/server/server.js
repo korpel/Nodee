@@ -22,7 +22,7 @@ var newTodo = new Todo({
 }); 
 
 var newTodo2 = new Todo({
-    text: 'do laundry',
+    text: 'do laudo dishes',
     completed: false,
     completedAt : 12
 });
