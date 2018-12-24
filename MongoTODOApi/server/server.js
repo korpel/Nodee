@@ -8,4 +8,6 @@ var {User} = require('./models/user');
 var app = express();
 
 
-app.listen(3000);
+app.listen(3000, () => {
+    console.log('Started on port 3000');
+});
