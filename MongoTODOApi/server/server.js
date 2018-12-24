@@ -24,7 +24,8 @@ var User = mongoose.model('Users', {
     email : {
         type: String,
         required: true,
-        minlength
+        minlength: 1,
+        trim: true
     }
 });
 
