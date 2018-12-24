@@ -15,3 +15,8 @@ var Todo = mongoose.model('Todo', {
         type: Number
     }
 });
+
+
+var newTodo = new Todo({
+    text: 'cook dinner'
+}); 
