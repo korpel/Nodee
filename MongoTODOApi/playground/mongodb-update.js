@@ -11,7 +11,11 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
 
     db.collection('Todos').findOneAndUpdate({
         _id: new ObjectID('5c1fe4d51b0812390567b328')
-    })
+    }, {
+        $set: {
+            completed: true
+        }
+    });
 
     // db.close();
 });
