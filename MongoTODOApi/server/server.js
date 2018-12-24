@@ -19,9 +19,9 @@ var Todo = mongoose.model('Todo', {
 });
 
 
-// var newTodo = new Todo({
-//     text: 'cook dinner'
-// }); 
+var newTodo = new Todo({
+    text: 'cook dinner'
+}); 
 
 // var newTodo2 = new Todo({
 //     text: 'do laudo dishes',
