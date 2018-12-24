@@ -17,15 +17,15 @@ var Todo = mongoose.model('Todo', {
 });
 
 
-var newTodo = new Todo({
-    text: 'cook dinner'
-}); 
+// var newTodo = new Todo({
+//     text: 'cook dinner'
+// }); 
 
-var newTodo2 = new Todo({
-    text: 'do laudo dishes',
-    completed: false,
-    completedAt : 12
-});
+// var newTodo2 = new Todo({
+//     text: 'do laudo dishes',
+//     completed: false,
+//     completedAt : 12
+// });
 
 newTodo.save().then((doc)=> {
     console.log('Saved todo', doc);
@@ -33,8 +33,8 @@ newTodo.save().then((doc)=> {
     console.log('Unable to save todo');
 });
 
-newTodo2.save().then((doc)=> {
-    console.log('Saved todo 2', doc);
-}, (err)=> {
-    console.log('Unable to save todo 2');
-});
+// newTodo2.save().then((doc)=> {
+//     console.log('Saved todo 2', doc);
+// }, (err)=> {
+//     console.log('Unable to save todo 2');
+// });
