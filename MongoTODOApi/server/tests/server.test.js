@@ -18,13 +18,13 @@ describe('POST /todos', () => {
         .send({text})
         .expect(200)
         .expect((res) => {
-            expect(text).toBe(text);
+            expect(res.body.text).toBe(text);
         })
         .end((err, res) =>{ 
             if (err) {
                 return done(err);
             }
-            Todo.find().then((todos)=>{
+            Todo.find().then((todos) => {
                 expect(todos.length).toBe(1);
                 expect(todos.text).toBe(text);
                 done();
