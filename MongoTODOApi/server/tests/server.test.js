@@ -15,6 +15,16 @@ describe('POST /todos', () => {
         .expect(200)
         .expect((res) => {
             expect(res.body.text).toBe(text);
-        });
+        })
+        .end((err,res)=>{
+            if (err) {
+                return done(err);
+            }
+            Todo.find().then((todos)=>{
+                expect(todos.length).toBe(1);
+                expect(todos.text).toBe(text);
+                done();
+            }).catch((e)=>{done(e)});
+        })
     });
 });
