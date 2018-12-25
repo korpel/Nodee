@@ -1,3 +1,5 @@
 
 const expect = require('expect');
-const require = require('supertest');
+const request = require('supertest');
+
+const {app} = require('./../server');
