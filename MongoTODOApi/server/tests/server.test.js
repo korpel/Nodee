@@ -29,6 +29,6 @@ describe('POST /todos', () => {
                 expect(todos.text).toBe(text);
                 done();
             }).catch((e)=>done(e));
-        })
+        });
     });
 });
