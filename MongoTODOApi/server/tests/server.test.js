@@ -11,16 +11,16 @@ beforeEach((done)=>{
 
 describe('POST /todos', () => {
     it('Should create new todo', (done) => {
-        var text = '   Test todo text';
+        var text = 'test todo text';
 
         request(app)
         .post('/todos')
         .send({text})
         .expect(200)
         .expect((res) => {
-            expect(res.body.text).toBe(text);
+            expect(text).toBe(text);
         })
-        .end((err,res)=>{
+        .end((err, res) =>{ 
             if (err) {
                 return done(err);
             }
