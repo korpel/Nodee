@@ -58,3 +58,7 @@ describe('POST /todos', () => {
       });
   });
 });
+
+describe('GET /todos', ()=>{
+
+});
