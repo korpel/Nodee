@@ -8,7 +8,7 @@ const todos = [{
     text:'First test todo'
 }, {
     text: 'Second test todo'
-}]
+}];
 
 
 beforeEach((done) => {
