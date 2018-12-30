@@ -14,7 +14,7 @@ const todos = [{
 beforeEach((done) => {
   Todo.remove({}).then(() => {
      return Todo.insertMany(todos);
-  }).then(()=> done());
+  }).then(() => done());
 });
 
 describe('POST /todos', () => {
@@ -34,7 +34,7 @@ describe('POST /todos', () => {
         }
 
         Todo.find().then((todos) => {
-          expect(todos.length).toBe(1);
+          expect(todos.length).toBe(3);
           expect(todos[0].text).toBe(text);
           done();
         }).catch((e) => done(e));
@@ -52,7 +52,7 @@ describe('POST /todos', () => {
         }
 
         Todo.find().then((todos) => {
-          expect(todos.length).toBe(0);
+          expect(todos.length).toBe(2);
           done();
         }).catch((e) => done(e));
       });
