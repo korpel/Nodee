@@ -67,5 +67,6 @@ it('Should get all todos', (done)=>{
     .expect((res)=> {
         expect(res.body.todos.length).toBe(2)
     })
+    .end(done)
 });
 });
