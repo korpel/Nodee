@@ -24,7 +24,7 @@ app.post('/todos', (req, res) => {
     
 });
 
-app.get('todos', ()=>{
+app.get('todos', (req, res)=>{
 
 });
 
