@@ -19,7 +19,7 @@ beforeEach((done) => {
 
 describe('POST /todos', () => {
   it('should create a new todo', (done) => {
-    var text = 'First todo text';
+    var text = 'Test todo text';
 
     request(app)
       .post('/todos')
@@ -34,7 +34,7 @@ describe('POST /todos', () => {
         }
 
         Todo.find().then((todos) => {
-          expect(todos.length).toBe(3);
+          expect(todos.length).toBe(1);
           expect(todos[0].text).toBe(text);
           done();
         }).catch((e) => done(e));
@@ -52,7 +52,7 @@ describe('POST /todos', () => {
         }
 
         Todo.find().then((todos) => {
-          expect(todos.length).toBe(2);
+          expect(todos.length).toBe(0);
           done();
         }).catch((e) => done(e));
       });
