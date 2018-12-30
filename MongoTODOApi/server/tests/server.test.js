@@ -12,7 +12,9 @@ const todos = [{
 
 
 beforeEach((done) => {
-  Todo.remove({}).then(() => done());
+  Todo.remove({}).then(() => {
+      Todo.insertMany(todos);
+  });
 });
 
 describe('POST /todos', () => {
