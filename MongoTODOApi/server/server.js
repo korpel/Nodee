@@ -35,7 +35,7 @@ app.get('/todos', (req, res)=>{
 });
 
 app.get('/todos/:id',(req, res)=>{
-    req.params
+    res.send(req.params);
 });
 
 
