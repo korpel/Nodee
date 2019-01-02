@@ -87,7 +87,8 @@ describe('GET /todos/:id', ()=> {
   });
 
   it('Should return 404 if todo not found', (done) => {
-    equest(app)
+    var hexID = new ObjectID().toHexString();
+    request(app)
     .get(`/todos/${todos[0]._id.toHexString()}`)
     .expect(404)
   });
