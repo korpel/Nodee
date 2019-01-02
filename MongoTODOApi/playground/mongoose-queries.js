@@ -14,5 +14,5 @@ Todo.find({
 Todo.findOne({
     _id : id
 }).then((todo)=> {
-    console.log('Todos', todo)
+    console.log('Todo', todo)
 }); 
