@@ -85,4 +85,8 @@ describe('GET /todos/:id', ()=> {
       })
       .end(done);
   });
+
+  it('Should return 404 if todo not found', (done) => {
+
+  });
 });
