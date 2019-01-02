@@ -19,7 +19,7 @@ Todo.findOne({
 
 Todo.findById(id).then((todo)=> {
     if (!todo) {
-        console.log('Id not found')
+       return console.log('Id not found')
     }
     console.log('Todo by id', todo)
 });
