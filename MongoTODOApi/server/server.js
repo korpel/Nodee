@@ -40,6 +40,9 @@ app.get('/todos/:id',(req, res)=>{
     if (!ObjectID.isValid(id)) {
         res.status(404).send();
     }
+    Todo.findById(id).then(()=> {
+
+    });
 });
 
 
