@@ -18,5 +18,5 @@ Todo.findOne({
 }); 
 
 Todo.findById(id).then((todo)=> {
-    console.log('Todo', todo)
+    console.log('Todo by id', todo)
 });
