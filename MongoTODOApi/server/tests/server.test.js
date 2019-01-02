@@ -95,6 +95,9 @@ describe('GET /todos/:id', ()=> {
   });
 
   it('Should return 404 for non objects', (done) => {
-
+    request(app)
+    .get(`/todos/1234asdk`)
+    .expect(404)
+    .end(done);
   });
 });
