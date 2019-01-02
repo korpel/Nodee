@@ -89,4 +89,8 @@ describe('GET /todos/:id', ()=> {
   it('Should return 404 if todo not found', (done) => {
 
   });
+
+  it('Should return 404 for non objects', (done) => {
+
+  });
 });
