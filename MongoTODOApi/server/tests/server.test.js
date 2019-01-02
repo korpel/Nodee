@@ -73,3 +73,8 @@ describe('GET /todos', () => {
     .end(done)
 });
 });
+
+
+describe('GET /todos/:id', ()=> {
+
+});
