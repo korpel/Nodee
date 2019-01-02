@@ -22,4 +22,4 @@ Todo.findById(id).then((todo)=> {
        return console.log('Id not found')
     }
     console.log('Todo by id', todo)
-});
+}).catch((e)=> console.log(e));
