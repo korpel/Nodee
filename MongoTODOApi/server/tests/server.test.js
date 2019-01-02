@@ -91,7 +91,7 @@ describe('GET /todos/:id', ()=> {
     request(app)
     .get(`/todos/${hexID}`)
     .expect(404)
-    .end(done)
+    .end(done);
   });
 
   it('Should return 404 for non objects', (done) => {
