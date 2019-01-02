@@ -36,7 +36,9 @@ app.get('/todos', (req, res)=>{
 
 app.get('/todos/:id',(req, res)=>{
     var id = req.params.id
-    res.send(req.params);
+    if (!mongoose.ObjectID(id)) {
+        res.status.send(404);
+    }
 });
 
 
