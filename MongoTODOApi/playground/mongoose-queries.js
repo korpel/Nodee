@@ -10,3 +10,9 @@ Todo.find({
 }).then((todos)=> {
     console.log('Todos', todos)
 }); 
+
+Todo.findOne({
+    _id : id
+}).then((todo)=> {
+    console.log('Todos', todo)
+}); 
