@@ -34,7 +34,9 @@ app.get('/todos', (req, res)=>{
 
 });
 
-app.get('/todos/:id')
+app.get('/todos/:id',(req, res)=>{
+    req.params
+});
 
 
 app.listen(3000, () => {
