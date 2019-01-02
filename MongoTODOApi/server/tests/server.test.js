@@ -87,7 +87,9 @@ describe('GET /todos/:id', ()=> {
   });
 
   it('Should return 404 if todo not found', (done) => {
-
+    equest(app)
+    .get(`/todos/${todos[0]._id.toHexString()}`)
+    .expect(404)
   });
 
   it('Should return 404 for non objects', (done) => {
