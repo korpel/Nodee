@@ -83,6 +83,6 @@ describe('GET /todos/:id', ()=> {
       .expect((res)=> {
         expect(res.body.todo.text).toBe(todos[0].text);
       })
-      .end(done)
+      .end(done);
   });
 });
