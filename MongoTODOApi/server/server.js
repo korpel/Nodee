@@ -1,7 +1,7 @@
 var env = process.env.NODE_ENV || 'development';
 
 if (env === 'development'){
-
+    process.env.PORT = 3000;
 }else if (env === 'test'){
 
 }
@@ -17,7 +17,7 @@ var {User} = require('./models/user');
 
 var app = express();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 
 app.use(bodyParser.json());
