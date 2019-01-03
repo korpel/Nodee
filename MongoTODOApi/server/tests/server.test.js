@@ -146,4 +146,12 @@ describe('DELETE /todos/:id', () => {
 
 describe('PATCH /todos/:id', () => {
 
+  it('Sould update the todo', (done)=> {
+
+  });
+
+  it('Should clear completedAt when todo is not completed', ()=> {
+
+  });
+
 });
