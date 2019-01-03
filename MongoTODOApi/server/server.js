@@ -70,6 +70,10 @@ app.delete('/todos/:id', (req, res) => {
     });
 });
 
+app.patch('/todos.:id', (req,res) => {
+    var id = req.params.is
+});
+
 
 app.listen(port, () => {
     console.log(`Setting port at ${port}`);
