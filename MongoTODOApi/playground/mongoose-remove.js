@@ -5,6 +5,6 @@ const {Todo} = require('../server/models/todo');
 const {ObjectID} = require('mongodb');
 const {User} = require ('./../server/models/user');
 
-Todo.remove({}).then( (result)=> {
-    console.log(result);
-});
+// Todo.remove({}).then( (result)=> {
+//     console.log(result);
+// });
