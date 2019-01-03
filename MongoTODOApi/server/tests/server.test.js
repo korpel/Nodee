@@ -105,7 +105,6 @@ describe('GET /todos/:id', ()=> {
 describe('DELETE /todos/:id', () => {
   it('Should remove a todo', (done)=>{
     var hexID = todos[1]._id.toHexString();
-  });
     request(app)
     .delete(`/todos/${hexID}`)
     .expect(200)
@@ -121,8 +120,8 @@ describe('DELETE /todos/:id', () => {
         expect(todo).toNotExist();
         done()
       }).catch((e)=>done(e));
-
-    });
+  });
+});
   
   it('Sould return 404 if todo not found', (done) => {
 
