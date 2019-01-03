@@ -133,6 +133,9 @@ describe('DELETE /todos/:id', () => {
   });
 
   it('Should return 404 for non objectif object id is invalid', (done) => {
-
+    request(app)
+    .get(`/todos/1234asdk`)
+    .expect(404)
+    .end(done);
   });
 });
