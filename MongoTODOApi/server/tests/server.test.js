@@ -113,7 +113,9 @@ describe('DELETE /todos/:id', () => {
       expect(res.body.text._id).toBe(hexID);
     })
     .end((err, res) => {
-
+      if(err) {
+        return done(err);
+      }
     });
   
   it('Sould return 404 if todo not found', (done) => {
