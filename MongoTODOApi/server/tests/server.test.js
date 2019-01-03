@@ -103,15 +103,15 @@ describe('GET /todos/:id', ()=> {
 });
 
 describe('DELETE /todos/:id', () => {
-  it('Should remove a todo', ()=>{
+  it('Should remove a todo', (done)=>{
 
   });
   
-  it('Sould return 404 if todo not found', () => {
+  it('Sould return 404 if todo not found', (done) => {
 
   });
 
-  it('Should return 404 for non objects', () => {
+  it('Should return 404 for non objectif object id is invalid', (done) => {
 
   });
 });
