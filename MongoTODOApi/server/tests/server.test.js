@@ -124,11 +124,15 @@ describe('DELETE /todos/:id', () => {
   });
 });
   
-  // it('Sould return 404 if todo not found', (done) => {
+  it('Sould return 404 if todo not found', (done) => {
+    var hexID = new ObjectID().toHexString();
+    request(app)
+    .get(`/todos/${hexID}`)
+    .expect(404)
+    .end(done);
+  });
 
-  // });
+  it('Should return 404 for non objectif object id is invalid', (done) => {
 
-  // it('Should return 404 for non objectif object id is invalid', (done) => {
-
-  // });
+  });
 });
