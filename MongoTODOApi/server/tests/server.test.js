@@ -105,11 +105,12 @@ describe('GET /todos/:id', ()=> {
 describe('DELETE /todos/:id', () => {
   it('Should remove a todo', (done)=>{
     var hexID = todos[1]._id.toHexString();
+
     request(app)
     .delete(`/todos/${hexID}`)
     .expect(200)
     .expect((res)=> {
-      expect(res.body.text._id).toBe(hexID);
+      expect(res.body.todo._id).toBe(hexID);
     })
     .end((err, res) => {
       if(err) {
@@ -123,11 +124,11 @@ describe('DELETE /todos/:id', () => {
   });
 });
   
-  it('Sould return 404 if todo not found', (done) => {
+  // it('Sould return 404 if todo not found', (done) => {
 
-  });
+  // });
 
-  it('Should return 404 for non objectif object id is invalid', (done) => {
+  // it('Should return 404 for non objectif object id is invalid', (done) => {
 
-  });
+  // });
 });
