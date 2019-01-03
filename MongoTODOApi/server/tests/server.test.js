@@ -147,7 +147,21 @@ describe('DELETE /todos/:id', () => {
 describe('PATCH /todos/:id', () => {
 
   it('Sould update the todo', (done)=> {
-
+    var hexID = todos[0]._id.toHexString();
+    var text = 'This should be the new text';
+    request(app)
+    .patch(`/todos/${hexID}`)
+    .send({
+      completed:true,
+      text
+    })
+    .expect(200)
+    .expect((res)=> {
+      expect(res.body.todo.text).toBe(text);
+      expect(res.body.todo.completed).toBe(true);
+      expect(res.body.todo.completedAt).toBeA('number');
+    })
+    .end(done)
   });
 
   it('Should clear completedAt when todo is not completed', ()=> {
