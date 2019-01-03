@@ -106,4 +106,12 @@ describe('DELETE /todos/:id', () => {
   it('Should remove a todo', ()=>{
 
   });
+  
+  it('Sould return 404 if todo not found', () => {
+
+  });
+
+  it('Should return 404 for non objects', () => {
+
+  });
 });
