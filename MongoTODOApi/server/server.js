@@ -1,4 +1,10 @@
-var env = process.env.NODE_ENV;
+var env = process.env.NODE_ENV || 'development';
+
+if (env === 'development'){
+
+}else if (env === 'test'){
+
+}
 
 const express = require('express');
 const bodyParser = require('body-parser');
