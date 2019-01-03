@@ -116,6 +116,11 @@ describe('DELETE /todos/:id', () => {
       if(err) {
         return done(err);
       }
+
+      Todo.findById(hexID).then((todo)=>{
+        expect(todo).toNotExist();
+      });
+
     });
   
   it('Sould return 404 if todo not found', (done) => {
