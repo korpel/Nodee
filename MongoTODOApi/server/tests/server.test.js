@@ -142,3 +142,8 @@ describe('DELETE /todos/:id', () => {
     .end(done);
   });
 });
+
+
+describe('PATCH /todos/:id', () => {
+
+});
