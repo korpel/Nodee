@@ -55,7 +55,7 @@ app.get('/todos/:id',(req, res)=>{
 
 
 app.listen(port, () => {
-    console.log('');
+    console.log(`Setting port at ${port}`);
 });
 
 
