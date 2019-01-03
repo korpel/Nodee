@@ -53,6 +53,10 @@ app.get('/todos/:id',(req, res)=>{
     });
 });
 
+app.delete('/todos/:id', (req, res) =>{
+
+});
+
 
 app.listen(port, () => {
     console.log(`Setting port at ${port}`);
