@@ -119,7 +119,8 @@ describe('DELETE /todos/:id', () => {
 
       Todo.findById(hexID).then((todo)=>{
         expect(todo).toNotExist();
-      });
+        done()
+      }).catch((e)=>done(e));
 
     });
   
