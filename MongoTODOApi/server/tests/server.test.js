@@ -101,3 +101,9 @@ describe('GET /todos/:id', ()=> {
     .end(done);
   });
 });
+
+describe('DELETE /todos/:id', () => {
+  it('Should remove a todo', ()=>{
+
+  });
+});
