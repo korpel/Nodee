@@ -17,5 +17,5 @@ var resultHash = SHA256(JSON.stringify(token.data) + 'somesecret').toString()
 if (resultHash === token.hash) {
     console.log('Data was not changed!');
 } else {
-    console.log('Data was changed');
+    console.log('Data was changed. Do not trust');
 }
