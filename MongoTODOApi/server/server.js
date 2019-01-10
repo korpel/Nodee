@@ -129,6 +129,8 @@ app.get('/users/me', (req, res)=>{
 
         }
         res.send(user);
+    }).catch((e)=>{
+        res.status(401).send();
     });
 });
 
