@@ -5,8 +5,10 @@ const jwt = require('jsonwebtoken');
 
 var data = {
          id: 10
-    };
-jwt.sign
+};
+
+var token = jwt.sign(data, '123456');
+
 jwt.verify
 
 // var message = 'I am number 3';
