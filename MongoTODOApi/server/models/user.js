@@ -7,7 +7,13 @@ var User = mongoose.model('Users', {
         required: true,
         minlength: 1,
         trim: true,
-        unique: true
+        unique: true,
+        validate: {
+            validator: (value)=> {
+
+            },
+            message: '{VALUE} is not a valid email!'
+        }
     }
 });
 
