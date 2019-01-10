@@ -33,6 +33,11 @@ var UserSchema = mongoose.Schema({
         }]
 });
 
+UserSchema.statics.findByToken = function(token) {
+    var User = this;
+    var decode;
+}
+
 UserSchema.methods.toJSON = function () {
     var user = this;
     var userObject = user.toObject();
