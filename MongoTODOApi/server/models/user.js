@@ -47,8 +47,8 @@ UserSchema.statics.findByToken = function(token) {
         '_id': decoded._id,
         'tokens.token': token,
         'tokens.access': 'auth'
-    })
-}
+    });
+};
 
 UserSchema.methods.toJSON = function () {
     var user = this;
