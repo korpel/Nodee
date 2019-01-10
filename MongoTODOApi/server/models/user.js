@@ -35,13 +35,19 @@ var UserSchema = mongoose.Schema({
 
 UserSchema.statics.findByToken = function(token) {
     var User = this;
-    var decode;
+    var decoded;
 
     try {
-        decode = jwt.verify(token, '123abc');
+        decoded = jwt.verify(token, '123abc');
     } catch (e) {
 
     }
+
+    return User.findOne({
+        '_id': decoded._id,
+        'tokens.token': token,
+        'tokens.access': 'auth'
+    })
 }
 
 UserSchema.methods.toJSON = function () {
