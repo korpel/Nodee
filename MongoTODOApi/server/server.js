@@ -138,16 +138,7 @@ var authenticate = (req, res, next) => {
 
 };
 app.get('/users/me',authenticate, (req, res)=>{
-    var token = req.header('x-auth');
-
-    User.findByToken(token).then((user)=>{
-        if(!user){
-            return Promise.reject();
-        }
-        res.send(user);
-    }).catch((e)=>{
-        res.status(401).send();
-    });
+    res.send(req.user);
 });
 
 app.listen(port, () => {
