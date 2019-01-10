@@ -108,6 +108,10 @@ app.patch('/todos/:id', (req,res) => {
 
 });
 
+app.post('/users', (req,res)=>{
+
+});
+
 
 app.listen(port, () => {
     console.log(`Setting port at ${port}`);
