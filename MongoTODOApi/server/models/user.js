@@ -36,6 +36,12 @@ var UserSchema = mongoose.Schema({
 UserSchema.statics.findByToken = function(token) {
     var User = this;
     var decode;
+
+    try {
+        decode = jwt.verify(token, '123abc');
+    } catch (e) {
+
+    }
 }
 
 UserSchema.methods.toJSON = function () {
