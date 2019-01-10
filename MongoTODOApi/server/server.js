@@ -121,6 +121,9 @@ app.post('/users', (req,res)=>{
     })
 });
 
+app.get('/users/me', ()=>{
+
+});
 
 app.listen(port, () => {
     console.log(`Setting port at ${port}`);
