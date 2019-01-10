@@ -1,3 +1,5 @@
+var {User} = require('./../models/user');
+
 var authenticate = (req, res, next) => {
     var token = req.header('x-auth');
 
@@ -13,3 +15,5 @@ var authenticate = (req, res, next) => {
         res.status(401).send();
     });
 };
+
+
