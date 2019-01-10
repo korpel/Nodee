@@ -7,3 +7,8 @@ var hash = SHA256(message).toString();
 var data = {
     id: 4
 };
+
+var token = {
+    data,
+    hash: SHA256(JSON.stringify(data)).toString()
+}
