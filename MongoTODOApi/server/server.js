@@ -121,6 +121,10 @@ app.post('/users', (req,res)=>{
     })
 });
 
+
+var authenticate = (req, res, next) => {
+
+};
 app.get('/users/me', (req, res)=>{
     var token = req.header('x-auth');
 
