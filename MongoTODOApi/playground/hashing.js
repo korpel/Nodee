@@ -15,7 +15,7 @@ var token = {
 
 var resultHash = SHA256(JSON.stringify(token.data) + 'somesecret').toString()
 if (resultHash === token.hash) {
-    console.log('data was not changed!');
+    console.log('Data was not changed!');
 } else {
     console.log('Data was changed');
 }
