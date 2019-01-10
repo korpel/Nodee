@@ -114,6 +114,8 @@ app.post('/users', (req,res)=>{
 
     user.save().then((user)=>{
         res.send(user);
+    }).catch((e)=>{
+        res.status(400).send(e);
     })
 });
 
