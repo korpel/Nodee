@@ -38,7 +38,7 @@ UserSchema.statics.findByToken = function(token) {
     var decoded;
 
     try {
-        decoded = jwt.verify(token, '123abc');
+        decoded = jwt.verify(token, 'abc123');
     } catch (e) {
 
     }
@@ -53,6 +53,7 @@ UserSchema.statics.findByToken = function(token) {
 UserSchema.methods.toJSON = function () {
     var user = this;
     var userObject = user.toObject();
+
 
     return _.pick(userObject, ['_id','email']);
 }
