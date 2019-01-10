@@ -19,7 +19,13 @@ var User = mongoose.model('Users', {
         minlength: 6
     },
     tokens : [{
-        
+        access: {
+
+        },
+        token: {
+            
+        }
+
     }]
 });
 
