@@ -10,5 +10,5 @@ var data = {
 
 var token = {
     data,
-    hash: SHA256(JSON.stringify(data) + 'someSecret').toString()
+    hash: SHA256(JSON.stringify(data) + 'somesecret').toString()
 }; 
