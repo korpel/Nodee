@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 
 
 var data = {
-         id: 100
+         id: 10
     };
 jwt.sign
 jwt.verify
