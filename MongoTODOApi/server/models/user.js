@@ -17,7 +17,8 @@ var User = mongoose.model('Users', {
         type: String,
         required: true,
         minlength: 6
-    }
+    },
+    tokens : 
 });
 
 module.exports = {User};
