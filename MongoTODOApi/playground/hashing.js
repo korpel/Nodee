@@ -9,7 +9,7 @@ var data = {
 
 var token = jwt.sign(data, '123456');
 
-jwt.verify
+var decoded = jwt.verify(token, '123456');
 
 // var message = 'I am number 3';
 
