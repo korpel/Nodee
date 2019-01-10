@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
 
-var userSchema = mongoose.Schema({
+var UserSchema = mongoose.Schema({
         email: {
             type: String,
             required: true,
@@ -31,6 +31,8 @@ var userSchema = mongoose.Schema({
         }]
 });
 
-var User = mongoose.model('Users', userSchema);
+UserSchema.methods.generateAuthToken
+
+var User = mongoose.model('Users', UserSchema);
 
 module.exports = {User};
