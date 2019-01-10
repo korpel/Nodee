@@ -2,6 +2,13 @@ const {SHA256} = require('crypto-js');
 
 const jwt = require('jsonwebtoken');
 
+
+var data = {
+         id: 100
+    };
+jwt.sign
+jwt.verify
+
 // var message = 'I am number 3';
 
 // var hash = SHA256(message).toString();
