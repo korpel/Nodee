@@ -123,6 +123,8 @@ app.post('/users', (req,res)=>{
 
 app.get('/users/me', (req, res)=>{
     var token = req.header('x-auth');
+
+    User.findByToken(token);
 });
 
 app.listen(port, () => {
