@@ -113,8 +113,10 @@ app.post('/users', (req,res)=>{
     var user = new User(body);
 
     user.save().then((user)=>{
-        user.generateAuthToken();
+        return user.generateAuthToken();
         // res.send(user);
+    }).then((token)=>{
+        res.send(user);
     }).catch((e)=>{
         res.status(400).send(e);
     })
