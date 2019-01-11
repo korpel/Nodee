@@ -41,7 +41,7 @@ const populateTodos = (done) => {
 
 const populateUsers = (done) => {
     User.remove({}).then(()=>{
-
+        var user = new User(users[0]).save();
     });
 };
 
