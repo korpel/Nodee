@@ -77,7 +77,8 @@ if(user.isModified('password')){
 
     bcrypt.genSalt(10,(err,salt)=>{
         bcrypt.hash(user.password, salt, (err,hash)=>{
-            user.password=password;
+            user.password=hash;
+            next();
         });
     });
 
