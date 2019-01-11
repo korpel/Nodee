@@ -14,7 +14,7 @@ const jwt = require('jsonwebtoken');
 var hashedPassword = '$2a$10$LL5WxdwpNnj/VvRE51JNg.gkTOt4Ow7f7RfurG8UYrohAabQg/bRu';
 
 bcrypt.compare(password,hashedPassword,(err,res)=>{
-
+    console.log (res);
 });
 
 // var data = {
