@@ -3,13 +3,16 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 
-var data = {
-         id: 10
-};
 
-var token = jwt.sign(data, '123456');
+var password = '123abc';
 
-var decoded = jwt.verify(token, '123456');
+// var data = {
+//          id: 10
+// };
+
+// var token = jwt.sign(data, '123456');
+
+// var decoded = jwt.verify(token, '123456');
 
 // var message = 'I am number 3';
 
