@@ -71,6 +71,12 @@ UserSchema.methods.generateAuthToken = function () {
 
 UserSchema.pre('save', function (next){
 var user = this;
+
+if(user.isModified('password')){
+
+}else {
+    
+}
 });
 
 var User = mongoose.model('Users', UserSchema);
