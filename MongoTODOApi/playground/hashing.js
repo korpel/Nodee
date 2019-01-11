@@ -4,12 +4,12 @@ const jwt = require('jsonwebtoken');
 
 
 
-var password = '123abc';
-bcrypt.genSalt(10,(err, salt)=>{
-    bcrypt.hash(password, salt,(err,hash)=>{
-        console.log(hash);
-    });
-});
+// var password = '123abc';
+// bcrypt.genSalt(10,(err, salt)=>{
+//     bcrypt.hash(password, salt,(err,hash)=>{
+//         console.log(hash);
+//     });
+// });
 
 var hashedPassword = '$2a$10$LL5WxdwpNnj/VvRE51JNg.gkTOt4Ow7f7RfurG8UYrohAabQg/bRu';
 
