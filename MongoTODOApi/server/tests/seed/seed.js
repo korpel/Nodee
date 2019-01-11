@@ -5,7 +5,8 @@ const {Todo} = require('./../../models/todo');
 const {User}= require('./../../models/user');
 
 
-const userOneId = new ObjectID()
+const userOneId = new ObjectID();
+const userTwoId = new ObjectID();
 
 const users = [{
     _id: userOneId,
