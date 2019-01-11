@@ -1,6 +1,6 @@
 const {ObjectID} = require('mongodb');
 const {Todo} = require('./../../models/todo');
-
+const {User}= require('./../../models/user');
 const todos = [{
     _id : new ObjectID(),
     text:'First test todo'
