@@ -40,7 +40,9 @@ const populateTodos = (done) => {
   }
 
 const populateUsers = (done) => {
+    User.remove({}).then(()=>{
 
+    });
 };
 
 
