@@ -75,7 +75,7 @@ var user = this;
 if(user.isModified('password')){
 
 }else {
-    
+    next();
 }
 });
 
