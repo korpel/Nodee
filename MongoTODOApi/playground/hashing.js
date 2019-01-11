@@ -5,6 +5,9 @@ const jwt = require('jsonwebtoken');
 
 
 var password = '123abc';
+bcrypt.genSalt(10,()=>{
+
+});
 
 // var data = {
 //          id: 10
