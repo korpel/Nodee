@@ -1,5 +1,5 @@
 const {ObjectID} = require('mongodb');
-const {Todo} = require('./../models/todo');
+const {Todo} = require('./../../models/todo');
 
 const todos = [{
     _id : new ObjectID(),
