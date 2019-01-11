@@ -10,7 +10,7 @@ const {todos, populateTodos} = require('./seed/seed');
 
 
 
-beforeEach();
+beforeEach(populateTodos);
 
 describe('POST /todos', () => {
   it('should create a new todo', (done) => {
