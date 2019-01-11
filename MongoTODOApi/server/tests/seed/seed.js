@@ -16,7 +16,12 @@ const users = [{
         access: 'auth',
         token: jwt.sign({_id: userOneId, access: 'auth'}, 'abc123').toString()
     }]
-}]
+}, {
+    _id: userTwoId,
+    email: 'vozikis2@gmail.com',
+    password: 'userTwoPassword'
+
+}];
 
 const todos = [{
     _id : new ObjectID(),
@@ -33,6 +38,10 @@ const populateTodos = (done) => {
        return Todo.insertMany(todos);
     }).then(() => done());
   }
+
+const populateUsers = (done) => {
+
+};
 
 
   module.exports = {
