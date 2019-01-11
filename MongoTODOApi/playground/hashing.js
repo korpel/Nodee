@@ -1,5 +1,5 @@
 const {SHA256} = require('crypto-js');
-
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 
