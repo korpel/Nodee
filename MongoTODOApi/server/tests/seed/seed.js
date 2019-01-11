@@ -16,3 +16,9 @@ const populateTodos = (done) => {
        return Todo.insertMany(todos);
     }).then(() => done());
   }
+
+
+  module.exports = {
+      todos,
+      populateTodos
+  }
