@@ -8,8 +8,9 @@ const {Todo} = require('./../models/todo');
 const {todos, populateTodos, users, populateUsers} = require('./seed/seed');
 
 
-beforeEach(populateTodos);
 beforeEach(populateUsers);
+beforeEach(populateTodos);
+
 
 describe('POST /todos', () => {
   it('should create a new todo', (done) => {
