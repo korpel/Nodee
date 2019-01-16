@@ -196,7 +196,7 @@ describe('GET /users/me', ()=>{
           expect(res.body).toEqual({});
         })
         .end(done)
-        });
+
   });
 
 });
