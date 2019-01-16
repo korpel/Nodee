@@ -236,6 +236,8 @@ describe('POST /users', ()=>{
           'email':'123',
           'password':':and'
         })
+        .expect(400)
+        .end(done);
       });
 
     it('Should not create user if email in use',(done)=>{
