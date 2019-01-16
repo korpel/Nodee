@@ -200,8 +200,8 @@ describe('GET /users/me', ()=>{
             return done(err)
           }
 
-          users.findOne({email}).then(()=>{
-
+          users.findOne({email}).then((user)=>{
+            expect(user).toExist();
           });
         });
   });
