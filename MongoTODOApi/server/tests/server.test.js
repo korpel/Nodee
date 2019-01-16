@@ -221,7 +221,7 @@ describe('POST /users', ()=>{
             return done(err)
           }
 
-          users.find({email}).then((user)=>{
+          users.findOne({email}).then((user)=>{
             expect(user).toExist();
             expect(user.password).toNotBe(password);
             done(); 
