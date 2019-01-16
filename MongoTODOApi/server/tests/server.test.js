@@ -195,7 +195,15 @@ describe('GET /users/me', ()=>{
         .expect((res)=>{
           expect(res.body).toEqual({});
         })
-        .end(done);
+        .end((err)=>{
+          if (err) {
+            return done(err)
+          }
+
+          users.findOne({email}).then(()=>{
+
+          });
+        });
   });
 
 });
