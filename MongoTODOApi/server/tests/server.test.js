@@ -189,7 +189,13 @@ describe('GET /users/me', ()=>{
   });
 
   it('Should return 401 if not authenticated',(done)=>{
+      request(app)
+        .get('/users/me')
+        .expect(401)
+        .expect((res)=>{
 
+        })
+        .end(done);
   });
 
 });
