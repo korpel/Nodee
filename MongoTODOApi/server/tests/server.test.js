@@ -205,6 +205,15 @@ describe('POST /users', ()=>{
     it('Should create a user',(done)=>{
       var email = 'example@example.com';
       var password = '123mnb!';
+      request(app)
+        .post('/users')
+        .send({email,password})
+        .expect(200)
+        .expect((res)=>{
+          expect(res.headers['x-auth']).toExist();
+          expect(res.body._id).toExist();
+          
+        })
     });
 
     it('Should return validation errors if request invalid', (done)=>{
