@@ -212,6 +212,7 @@ describe('POST /users', ()=>{
         .expect((res)=>{
           expect(res.headers['x-auth']).toExist();
           expect(res.body._id).toExist();
+          expect(res.body.email).toBe(email);
           
         })
     });
