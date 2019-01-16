@@ -195,16 +195,7 @@ describe('GET /users/me', ()=>{
         .expect((res)=>{
           expect(res.body).toEqual({});
         })
-        .end((err)=>{
-          if (err) {
-            return done(err)
-          }
-
-          users.findOne({email}).then((user)=>{
-            expect(user).toExist();
-            expect(user.password).toNotBe(password);
-            done();
-          });
+        .end(done)
         });
   });
 
@@ -224,7 +215,16 @@ describe('POST /users', ()=>{
           expect(res.body._id).toExist();
           expect(res.body.email).toBe(email);
         })
-        .end(done);
+        .end((err)=>{
+          if (err) {
+            return done(err)
+          }
+
+          users.findOne({email}).then((user)=>{
+            expect(user).toExist();
+            expect(user.password).toNotBe(password);
+            done();
+          });
     });
 
     it('Should return validation errors if request invalid', (done)=>{
