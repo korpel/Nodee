@@ -214,6 +214,7 @@ describe('POST /users', ()=>{
           expect(res.body._id).toExist();
           expect(res.body.email).toBe(email);
         })
+        .end(done);
     });
 
     it('Should return validation errors if request invalid', (done)=>{
