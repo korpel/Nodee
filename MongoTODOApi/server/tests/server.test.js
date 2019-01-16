@@ -223,7 +223,8 @@ describe('POST /users', ()=>{
           users.findOne({email}).then((user)=>{
             expect(user).toExist();
             expect(user.password).toNotBe(password);
-            done();
+            done(); 
+          });
           });
     });
 
