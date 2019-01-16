@@ -183,7 +183,7 @@ describe('GET /users/me', ()=>{
       .expect(200)
       .expect((res)=>{
         expect(res.body.id).toBe(users[0]._id.toHexString());
-        expect(res.body.email).toBe(users[0].email.);
+        expect(res.body.email).toBe(users[0].email);
       })
   });
 
