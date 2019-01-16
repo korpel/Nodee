@@ -202,7 +202,15 @@ describe('GET /users/me', ()=>{
 
 
 describe('POST /users', ()=>{
-    it('Should create a user',()=>{
+    it('Should create a user',(done)=>{
+
+    });
+
+    it('Should return validation errors if request invalid', (done)=>{
+
+    });
+
+    it('Should not create user if email in use'(done)=>{
 
     });
 });
