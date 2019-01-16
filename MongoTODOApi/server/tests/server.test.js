@@ -247,6 +247,8 @@ describe('POST /users', ()=>{
         'email':users[0].email,
         'password': 'somePass'
       })
+      .expect(400)
+      .end(done)
     });
 });
 
