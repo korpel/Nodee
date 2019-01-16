@@ -185,7 +185,7 @@ describe('GET /users/me', ()=>{
         expect(res.body.id).toBe(users[0]._id.toHexString());
         expect(res.body.email).toBe(users[0].email);
       })
-      .end(done())
+      .end(done);
   });
 
   it('Should return 401 if not authenticated',(done)=>{
