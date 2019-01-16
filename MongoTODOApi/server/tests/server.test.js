@@ -182,7 +182,8 @@ describe('GET /users/me', ()=>{
       .set('x-auth', users[0].tokens[0].token)
       .expect(200)
       .expect((res)=>{
-        expect(res.body.id).toBe(users[0]._id.toHexString())
+        expect(res.body.id).toBe(users[0]._id.toHexString());
+        expect(res.body.email).toBe(users[0].email.);
       })
   });
 
