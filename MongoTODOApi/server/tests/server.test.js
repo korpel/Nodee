@@ -202,6 +202,8 @@ describe('GET /users/me', ()=>{
 
 
 describe('POST /users', ()=>{
+    it('Should create a user',()=>{
 
+    });
 });
 
