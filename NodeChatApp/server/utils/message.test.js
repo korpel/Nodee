@@ -20,5 +20,8 @@ describe('generateLocationMessage', ()=> {
         var longtitude = 19;
         var url = 'https://www.google.com/maps?q=15,19'
         var message = generateLocationMessage(from, latitude,longtitude)
+
+        expect(message.createdAt).toBeA('number');
+        expect(message).toInclude({from,text});
     });
 });
