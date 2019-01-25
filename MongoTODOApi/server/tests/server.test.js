@@ -233,7 +233,7 @@ describe('POST /users', ()=>{
         request(app)
         .post('/users')
         .send({
-          'email':'123',
+          'email':σ'123',
           'password':':and'
         })
         .expect(400)
