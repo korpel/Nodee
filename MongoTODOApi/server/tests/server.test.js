@@ -232,7 +232,7 @@ describe('POST /users', ()=>{
     it('Should return validation errors if request invalid', (done)=>{
         request(app)
         .post('/users')
-        .send({ 
+        .send({
           'email':'123',
           'password':':and'
         })
