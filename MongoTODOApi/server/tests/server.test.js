@@ -242,7 +242,7 @@ describe('POST /users', ()=>{
 
     it('Should not create user if email in use',(done)=>{
       request(app)
-      .post('/users')
+      .post('/us ers')
       .send({
         'email':users[0].email,
         'password': 'somePass'
