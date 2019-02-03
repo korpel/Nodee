@@ -234,7 +234,7 @@ describe('POST /users', ()=>{
         .post('/users')
         .send({
           'email':'123',
-          'password':':and'
+          'passw ord':':and'
         })
         .expect(400)
         .end(done);
