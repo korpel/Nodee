@@ -257,6 +257,9 @@ describe(' GET /users/me', ()=>{
     .get('/users/me')
     .set('x-auth', users[0].tokens[0].token)
     .expect(200)
+    .expect((res)=>{
+      expect(res.body._id).toBe(users[0]._id.toHexString());
+    })
   });
   it('Should return 401 if not authenticated',(done)=>{
 
