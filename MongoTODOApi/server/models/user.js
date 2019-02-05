@@ -75,7 +75,7 @@ UserSchema.statics.findByCredentials = function (email, password){
 UserSchema.statics.removeToken = function (token) {
 var user = this;
 
-user.update({
+return user.update({
     $pull: {
         tokens: {
             token: token
