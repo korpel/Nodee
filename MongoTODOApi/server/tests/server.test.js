@@ -252,6 +252,8 @@ describe('POST /users', ()=>{
     });
 });
 describe(' GET /users/me', ()=>{
-  
-})
+  it('Should return user if aythenticated'. (done)=>{
+
+  });
+});
 
