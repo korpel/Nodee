@@ -282,4 +282,7 @@ describe('POST /users', ()=>{
   it('Should return validation errors if request invalide', (done)=>{
 
   });
+  it('Should not create user if email in use',(done)=>{
+
+  });
 });
