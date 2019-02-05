@@ -326,7 +326,7 @@ describe('POST /users', ()=>{
   });
 });
 
-describe('POST /users/login', (done)=>{
+describe('POST /users/login', (done) => {
     request(app)
     .post('/users/login')
     .send({
@@ -342,5 +342,11 @@ describe('POST /users/login', (done)=>{
         return done(err);
       }
 
-    
+    User.findById(users[1]._id).then((user)=>{
+      expect(user.tokens[0]).toInclude({
+        access: 'auth',
+        token: res.headers[x-auth]
+      });
+      done();
+    }) 
 });
