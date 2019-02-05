@@ -293,6 +293,11 @@ describe('POST /users', ()=>{
       if (err) {
         return done(err);
       }
+
+      User.findOne({email}).then((user)=>{
+        expect(user).toExist();
+        
+      })
     });
   });
   it('Should return validation errors if request invalide', (done)=>{
