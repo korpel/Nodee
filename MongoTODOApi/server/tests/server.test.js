@@ -327,5 +327,20 @@ describe('POST /users', ()=>{
 });
 
 describe('POST /users/login', (done)=>{
+    request(app)
+    .post('/users/login')
+    .send({
+      email: users[1].email,
+      password: users[1].password
+    })
+    .expect(200)
+    .expect((res)=>{
+      expect(res.headers['x-auth']).toExist();
+    })
+    .end((err)=>{
+      if (err) {
+        return done(err);
+      }
 
+    
 });
