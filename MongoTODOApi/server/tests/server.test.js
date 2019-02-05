@@ -348,5 +348,5 @@ describe('POST /users/login', (done) => {
         token: res.headers[x-auth]
       });
       done();
-    }) 
+    }).catch((e)=> done(e));
 });
