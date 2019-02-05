@@ -327,6 +327,7 @@ describe('POST /users', ()=>{
 });
 
 describe('POST /users/login', (done) => {
+  it('Should login user nad return auth token', (done)=>{
     request(app)
     .post('/users/login')
     .send({
