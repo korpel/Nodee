@@ -286,7 +286,10 @@ describe('POST /users', ()=>{
     .expect(200)
     .expect((res)=>{
       expect(res.headers['x-auth']).toExist();
+      expect(res.body._id).toExist()
+      expect(res.body.email).toBe(email)
     })
+    .end(done)
   });
   it('Should return validation errors if request invalide', (done)=>{
 
