@@ -51,6 +51,10 @@ UserSchema.statics.findByToken = function(token) {
     });
 };
 
+UserSchema.statics.findByCredentials = function (email, password){
+
+};
+
 UserSchema.methods.toJSON = function () {
     var user = this;
     var userObject = user.toObject();
