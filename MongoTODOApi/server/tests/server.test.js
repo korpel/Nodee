@@ -338,7 +338,7 @@ describe('POST /users/login', (done) => {
     .expect((res)=> {
       expect(res.headers['x-auth']).toExist();
     })
-    .end((err)=> {
+    .end((err, res)=> {
       if (err) {
         return done(err);
       }
