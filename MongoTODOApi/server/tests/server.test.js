@@ -251,4 +251,7 @@ describe('POST /users', ()=>{
       .end(done);
     });
 });
+describe(' GET /users/me', ()=>{
+  
+})
 
