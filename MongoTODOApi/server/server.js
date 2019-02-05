@@ -147,7 +147,7 @@ app.delete('/users/me/token',authenticate,(req,res)=>{
         res.status(200).send();
     },()=>{
         res.status(400).send();
-    })
+    });
 });
 
 
