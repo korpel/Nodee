@@ -278,6 +278,7 @@ describe(' GET /users/me', ()=>{
 describe('POST /users', ()=>{
   it('Should create a user', (done)=>{
     var email = 'example@example.com';
+    var password = '123mnb';
   });
   it('Should return validation errors if request invalide', (done)=>{
 
