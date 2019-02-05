@@ -128,6 +128,13 @@ app.get('/users/me',authenticate, (req, res)=>{
     res.send(req.user);
 });
 
+app.post('/users/login',(req,res)=>{
+    var body = _.pick(req.body, ['email', 'password']);
+
+})
+
+
+
 app.listen(port, () => {
     console.log(`Setting port at ${port}`);
 });
