@@ -350,5 +350,9 @@ describe('POST /users/login', (done) => {
       });
       done();
     }).catch((e)=> done(e));
+  });
 });
+  it('Should reject invalid login',(done)=>{
+
+  });
 });
