@@ -81,7 +81,7 @@ user.update({
             token: token
         }
     }
-})
+});
 };
 
 UserSchema.methods.toJSON = function () {
