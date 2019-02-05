@@ -338,11 +338,11 @@ describe('POST /users/login', (done) => {
     .expect((res)=> {
       expect(res.headers['x-auth']).toExist();
     })
-    .end((err,res)=> {
+    .end((err)=> {
       if (err) {
         return done(err);
       }
-    }
+
     User.findById(users[1]._id).then((user)=> {
       expect(user.tokens[0]).toInclude({
         access: 'auth',
