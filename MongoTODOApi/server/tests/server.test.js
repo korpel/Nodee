@@ -253,7 +253,10 @@ describe('POST /users', ()=>{
 });
 describe(' GET /users/me', ()=>{
   it('Should return user if aythenticated'. (done)=>{
-
+    request(app)
+    .get('/users/me')
+    .set('x-auth', users[0].tokens[0].token)
+    .expect(200)
   });
   it('Should return 401 if not authenticated',(done)=>{
 
