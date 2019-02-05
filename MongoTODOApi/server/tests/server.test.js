@@ -255,5 +255,8 @@ describe(' GET /users/me', ()=>{
   it('Should return user if aythenticated'. (done)=>{
 
   });
+  it('Should return 401 if not authenticated',(done)=>{
+
+  });
 });
 
