@@ -311,8 +311,6 @@ describe('POST /users', ()=>{
     })
     .expect(400)
     .end(done);
-    email: 'vozikis1@gmail.com',
-
   });
   it('Should not create user if email in use',(done)=>{
 
