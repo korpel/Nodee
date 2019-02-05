@@ -353,6 +353,25 @@ describe('POST /users/login', (done) => {
   });
 });
   it('Should reject invalid login',(done)=>{
+    request(app)
+    .post('/users/login')
+    .send({
+      email: users[1].email,
+      password: users[1].password + '1'
+    })
+    .expect(400)
+    .expect((res)=> {
+      expect(res.headers['x-auth']).toNotExist();
+    })
+    .end((err, res)=> {
+      if (err) {
+        return done(err);
+      }
 
+    User.findById(users[1]._id).then((user)=> {
+      expect(user.tokens.length).toBe(0);
+      done();
+    }).catch((e)=> done(e));
+  });
   });
 });
