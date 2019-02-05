@@ -63,7 +63,7 @@ UserSchema.statics.findByCredentials = function (email, password){
 
         });
 
-    })
+    });
 };
 
 UserSchema.methods.toJSON = function () {
