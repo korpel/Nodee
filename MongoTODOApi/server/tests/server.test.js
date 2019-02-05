@@ -303,6 +303,16 @@ describe('POST /users', ()=>{
   });
   it('Should return validation errors if request invalide', (done)=>{
     
+    request(app)
+    .post('/users')
+    .send({
+      email: 'and',
+      password: '123'
+    })
+    .expect(400)
+    .end(done);
+    email: 'vozikis1@gmail.com',
+
   });
   it('Should not create user if email in use',(done)=>{
 
