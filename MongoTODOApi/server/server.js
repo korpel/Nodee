@@ -134,6 +134,7 @@ app.post('/users/login',(req,res) =>{
     User.findByCredentials(body.email, body.password).then((user)=>{
         res.send(user);
     }).catch((e)=>{
+        res.status(400).send();
 
     });
 
