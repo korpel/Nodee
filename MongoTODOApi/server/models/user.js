@@ -72,7 +72,7 @@ UserSchema.statics.findByCredentials = function (email, password){
     });
 };
 
-UserSchema.statics.removeToken = function (token) {
+UserSchema.methods.removeToken = function (token) {
 var user = this;
 
 return user.update({
