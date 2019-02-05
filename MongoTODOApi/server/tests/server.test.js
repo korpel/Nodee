@@ -252,7 +252,7 @@ describe('POST /users', ()=>{
     });
 });
 describe(' GET /users/me', ()=>{
-  it('Should return user if aythenticated'. (done)=>{
+  it('Should return user if aythenticated', (done)=>{
     request(app)
     .get('/users/me')
     .set('x-auth', users[0].tokens[0].token)
