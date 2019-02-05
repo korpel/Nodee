@@ -327,7 +327,7 @@ describe('POST /users', ()=>{
 });
 
 describe('POST /users/login', (done) => {
-  it('Should login user nad return auth token', (done)=>{
+  it('Should login user nad return auth token', (done)=> {
     request(app)
     .post('/users/login')
     .send({
@@ -338,18 +338,17 @@ describe('POST /users/login', (done) => {
     .expect((res)=>{
       expect(res.headers['x-auth']).toExist();
     })
-    .end((err)=>{
+    .end((err,res)=>{
       if (err) {
         return done(err);
       }
 
-    User.findById(users[1]._id).then((user)=>{
+    User.findById(users[1]._id).then((user)=> {
       expect(user.tokens[0]).toInclude({
         access: 'auth',
         token: res.headers[x-auth]
       });
       done();
     }).catch((e)=> done(e));
-});
 });
 });
