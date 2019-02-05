@@ -314,7 +314,14 @@ describe('POST /users', ()=>{
 
   });
   it('Should not create user if email in use',(done)=>{
-    
+    request(app)
+    .post('/users')
+    .send({
+      email: users[0].email,
+      password: '123pass'
+    })
+    .expect(400)
+    .end(done);
 
   });
 });
