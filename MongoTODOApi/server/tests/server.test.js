@@ -279,4 +279,7 @@ describe('POST /users', ()=>{
   it('Should create a user', (done)=>{
 
   });
+  it('Should return validation errors if request invalide', (done)=>{
+    
+  })
 });
