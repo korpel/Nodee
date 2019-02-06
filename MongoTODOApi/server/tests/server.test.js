@@ -372,7 +372,7 @@ describe('POST /users/login', (done) => {
       }
 
     User.findById(users[1]._id).then((user)=> {
-      expect(user.tokens.length).toBe(0);
+      expect(user.tokens.length).toBe(1);
       done();
     }).catch((e)=> done(e));
   });
