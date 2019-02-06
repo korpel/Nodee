@@ -212,6 +212,7 @@ describe('PATCH /todos/:id', () => {
     var text = 'This should be the new textsdal!!';
     request(app)
     .patch(`/todos/${hexID}`)
+    .set('x-auth', users[1].tokens[0].token)
     .send({
       completed: false,
       text
