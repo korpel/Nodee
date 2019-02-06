@@ -165,6 +165,7 @@ it('Should remove a todo', (done)=>{
   it('Should return 404 for non objectif object id is invalid', (done) => {
     request(app)
     .delete(`/todos/1234asdk`)
+    .set('x-auth', users[1].tokens[0].token)
     .expect(404)
     .end(done);
   });
