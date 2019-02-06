@@ -267,8 +267,8 @@ describe('POST /users', ()=>{
         .send({email,password})
         .expect(200)
         .expect((res)=>{
-          expect(res.headers['x-auth']).toExist();
-          expect(res.body._id).toExist();
+          expect(res.headers['x-auth']).tobeTruthy();
+          expect(res.body._id).toBeTruthy();
           expect(res.body.email).toBe(email);
         })
         .end((err)=>{
