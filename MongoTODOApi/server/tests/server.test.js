@@ -140,9 +140,6 @@ it('Should remove a todo', (done)=>{
   .delete(`/todos/${hexID}`)
   .set('x-auth', users[1].tokens[0].token)
   .expect(404)
-  .expect((res)=> {
-    expect(res.body.todo._id).toBe(hexID);
-  })
   .end((err, res) => {
     if(err) {
       return done(err);
