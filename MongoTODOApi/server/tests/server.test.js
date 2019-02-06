@@ -115,6 +115,7 @@ describe('DELETE /todos/:id', () => {
 
     request(app)
     .delete(`/todos/${hexID}`)
+    .set('x-auth', users[1].tokens[0].token)
     .expect(200)
     .expect((res)=> {
       expect(res.body.todo._id).toBe(hexID);
