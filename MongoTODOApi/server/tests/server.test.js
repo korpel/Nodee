@@ -87,6 +87,7 @@ describe('GET /todos/:id', ()=> {
     var hexID = new ObjectID().toHexString();
     request(app)
     .get(`/todos/${hexID}`)
+    .set('x-auth', users[0].tokens[0].token)
     .expect(404)
     .end(done);
   });
