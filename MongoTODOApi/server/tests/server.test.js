@@ -146,7 +146,7 @@ it('Should remove a todo', (done)=>{
     }
 
     Todo.findById(hexID).then((todo)=>{
-      expect(todo).toExist();
+      expect(todo).toBeTruthy();
       done()
     }).catch((e)=>done(e));
 });
