@@ -132,6 +132,30 @@ describe('DELETE /todos/:id', () => {
   });
 });
   
+
+it('Should remove a todo', (done)=>{
+  var hexID = todos[0]._id.toHexString();
+
+  request(app)
+  .delete(`/todos/${hexID}`)
+  .set('x-auth', users[1].tokens[0].token)
+  .expect(404)
+  .expect((res)=> {
+    expect(res.body.todo._id).toBe(hexID);
+  })
+  .end((err, res) => {
+    if(err) {
+      return done(err);
+    }
+
+    Todo.findById(hexID).then((todo)=>{
+      expect(todo).toNotExist();
+      done()
+    }).catch((e)=>done(e));
+});
+});
+
+
   it('Sould return 404 if todo not found', (done) => {
     var hexID = new ObjectID().toHexString();
     request(app)
