@@ -88,9 +88,6 @@ describe('GET /todos/:id', ()=> {
       .get(`/todos/${todos[1]._id.toHexString()}`)
       .set('x-auth', users[0].tokens[0].token)
       .expect(404)
-      .expect((res)=> {
-        expect(res.body.todo.text).toBe(todos[0].text);
-      })
       .end(done);
   });
 
