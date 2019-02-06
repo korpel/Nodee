@@ -378,7 +378,9 @@ describe('POST /users/login', (done) => {
 
 describe('DELETE /users/me/token',() => {
   it('Should remove auth token on logout',(done)=>{
-
+    request(app)
+    .delete('/users/me/token')
+    .set('x-auth', users[0].tokens.token)
   });
 
 });
