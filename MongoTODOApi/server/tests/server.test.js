@@ -95,6 +95,7 @@ describe('GET /todos/:id', ()=> {
   it('Should return 404 for non objects', (done) => {
     request(app)
     .get(`/todos/1234asdk`)
+    .set('x-auth', users[0].tokens[0].token)
     .expect(404)
     .end(done);
   });
