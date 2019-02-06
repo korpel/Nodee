@@ -83,11 +83,11 @@ describe('GET /todos/:id', ()=> {
       .end(done);
   });
 
-  it('Should return todo doc', (done)=> {
+  it('Should not return todo doc created by other user', (done)=> {
     request(app)
-      .get(`/todos/${todos[0]._id.toHexString()}`)
+      .get(`/todos/${todos[1]._id.toHexString()}`)
       .set('x-auth', users[0].tokens[0].token)
-      .expect(200)
+      .expect(404)
       .expect((res)=> {
         expect(res.body.todo.text).toBe(todos[0].text);
       })
