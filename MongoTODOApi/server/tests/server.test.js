@@ -83,6 +83,17 @@ describe('GET /todos/:id', ()=> {
       .end(done);
   });
 
+  it('Should return todo doc', (done)=> {
+    request(app)
+      .get(`/todos/${todos[0]._id.toHexString()}`)
+      .set('x-auth', users[0].tokens[0].token)
+      .expect(200)
+      .expect((res)=> {
+        expect(res.body.todo.text).toBe(todos[0].text);
+      })
+      .end(done);
+  });
+
   it('Should return 404 if todo not found', (done) => {
     var hexID = new ObjectID().toHexString();
     request(app)
