@@ -24,7 +24,6 @@ const users = [{
         access: 'auth',
         token: jwt.sign({_id: userOneId, access: 'auth'}, 'abc123').toString()
     }]
-
 }];
 
 const todos = [{
