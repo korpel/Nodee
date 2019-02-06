@@ -52,7 +52,7 @@ app.get('/todos',authenticate, (req, res)=>{
 
 });
 
-app.get('/todos/:id',(req, res)=>{
+app.get('/todos/:id',authenticate,(req, res)=>{
     var id = req.params.id
     if (!ObjectID.isValid(id)) {
         return res.status(404).send();
