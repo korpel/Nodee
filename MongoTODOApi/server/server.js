@@ -41,9 +41,8 @@ app.post('/todos', authenticate, (req, res) => {
 });
 
 app.get('/todos',authenticate, (req, res)=>{
-    var id = req.params.id;
-    Todo.findOne({
-        _id: id,
+
+    Todo.find({
         _creator: req.user._id
     }).then((todos)=> {
         res.send({todos});
