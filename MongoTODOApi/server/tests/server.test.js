@@ -278,7 +278,7 @@ describe('POST /users', ()=>{
 
           User.findOne({email}).then((user)=>{
             expect(user).toBeTruthy();
-            expect(user.password).toNotBe(password);
+            expect(user.password).not.toBe(password);
             done(); 
           });
           });
