@@ -157,6 +157,7 @@ it('Should remove a todo', (done)=>{
     var hexID = new ObjectID().toHexString();
     request(app)
     .delete(`/todos/${hexID}`)
+    .set('x-auth', users[1].tokens[0].token)
     .expect(404)
     .end(done);
   });
