@@ -377,6 +377,9 @@ describe('POST /users/login', (done) => {
 });
 
 describe('DELETE /users/me/token',() => {
-  it('Should remove auth token on logout')
+  it('Should remove auth token on logout',(done)=>{
+
+  });
+
 });
 
