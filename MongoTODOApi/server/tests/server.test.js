@@ -350,8 +350,8 @@ describe('POST /users', ()=>{
       }
 
       User.findOne({email}).then((user)=>{
-        expect(user).toExist();
-        expect(user.password).toNotBe(password);
+        expect(user).toBeTruthy();
+        expect(user.password).not.toBe(password);
         done();
       }).catch((e)=> done(e));
     });
