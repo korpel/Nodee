@@ -375,3 +375,7 @@ describe('POST /users/login', (done) => {
   });
   });
 });
+
+describe('DELETE /users/me/token',()=>{
+
+});
