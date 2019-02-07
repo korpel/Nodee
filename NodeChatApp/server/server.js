@@ -23,7 +23,7 @@ io.on('connection',(socket)=>{
     });
 
     socket.on('createMessage', (message) => {
-        console.log('createEmail', newEmail);
+        console.log('createMessage', message);
     });
    
     socket.on('disconnect',()=>{
