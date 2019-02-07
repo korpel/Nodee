@@ -8,6 +8,7 @@ const port = process.env.PORT || 3000;
 
 var server = http.createServer(app);
 var app = express();
+var io = socketIO(server);
 
 app.use(express.static(publicPath));
 
