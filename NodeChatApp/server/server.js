@@ -14,6 +14,6 @@ var io = socketIO(server);
 app.use(express.static(publicPath));
 
 
-app.listen(port,()=>{
+server.listen(port,()=>{
     console.log(`Server is up on port ${port}`);
 });
