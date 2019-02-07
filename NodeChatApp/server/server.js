@@ -17,7 +17,9 @@ io.on('connection',(socket)=>{
     console.log('new user connected');
 
     socket.emit('newEmail', {
-
+        from: 'Mike@example.com',
+        text: 'Hey. What is going on',
+        createdAt: 123
     });
    
     socket.on('disconnect',()=>{
