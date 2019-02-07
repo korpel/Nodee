@@ -15,11 +15,13 @@ app.use(express.static(publicPath));
 
 io.on('connection',()=>{
     console.log('new user connected');
+   
+ io.on('disconnect',()=>{
+    console.log('User disconnected');
+   });
 });
 
-io.on('disconnection',()=>{
-    console.log('User disconnected');
-});
+
 
 server.listen(port,()=>{
     console.log(`Server is up on port ${port}`);
