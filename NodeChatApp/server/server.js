@@ -2,7 +2,7 @@ const path = require('path');
 const http = require('http');
 const express = require('express');
 const socketIO = require('socket.io');
-var io = require('socket.io').listen(app);
+var nio = require('socket.io').listen(app);
 
 const publicPath = path.join(__dirname,'../public');
 const port = process.env.PORT || 3000;
