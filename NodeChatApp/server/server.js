@@ -17,6 +17,10 @@ io.on('connection',()=>{
     console.log('new user connected');
 });
 
+io.on('disconnection',()=>{
+    console.log('User disconnected');
+});
+
 server.listen(port,()=>{
     console.log(`Server is up on port ${port}`);
 });
