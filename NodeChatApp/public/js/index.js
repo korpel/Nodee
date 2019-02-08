@@ -16,6 +16,11 @@ var socket = io();
         jQuery('#messages').append(li);
     });
 
+
+    socket.on('newLocationMessage', function(message) {
+
+    });
+
     // socket.emit('createMessage', {
     //     from: 'Tony',
     //     text: 'Hi'
