@@ -4,7 +4,7 @@ const express = require('express');
 const socketIO = require('socket.io');
 
 
-const {generateMessage} = require('./utils/message')
+const {generateMessage, generateLocationMessage} = require('./utils/message')
 
 
 const publicPath = path.join(__dirname,'../public');
