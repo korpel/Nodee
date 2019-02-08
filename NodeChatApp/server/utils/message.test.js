@@ -14,5 +14,7 @@ describe('generateMessage',() => {
 });
 
 describe('generateLocationMessage', ()=> {
+    it('Should generate correct location object', ()=>{
 
+    });
 });
