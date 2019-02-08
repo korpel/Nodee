@@ -10,6 +10,9 @@ var socket = io();
 
     socket.on('newMessage', function (message){
         console.log('newMessage', message);
+        var li = jQuery('<li></li>');
+        li.text(`${from}: ${message.text}`);
+        
     });
 
     socket.emit('createMessage', {
@@ -26,6 +29,6 @@ var socket = io();
             from: 'User',
             text: jQuery('[name=message]').val()
         }, function (){
-            
+
         });
     });
