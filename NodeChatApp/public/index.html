@@ -26,8 +26,8 @@
     socket.emit('createMessage', {
         from: 'Tony',
         text: 'Hi'
-    }, function (){
-        console.log('Got it');
+    }, function (data){
+        console.log('Got it', data);
     });
 
    
