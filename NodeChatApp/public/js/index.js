@@ -63,5 +63,6 @@ var socket = io();
             });
         }, function (){
             alert('Unable to fecth location')
+            locationButton.removeAttr('disabled');
         });
     });
