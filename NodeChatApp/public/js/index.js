@@ -56,13 +56,13 @@ var socket = io();
         locationButton.attr('disabled', 'disabled').text('Sending location...');
 
         navigator.geolocation.getCurrentPosition(function(position){
-            locationButton.removeAttr('disabled');
+            locationButton.removeAttr('disabled').text('Send location');
             socket.emit('createLocationMessage', {
                 latitude: position.coords.latitude,
                 longtitude: position.coords.longitude
             });
         }, function (){
             alert('Unable to fecth location')
-            locationButton.removeAttr('disabled');
+            locationButton.removeAttr('disabled').text('Send location');
         });
     });
