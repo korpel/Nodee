@@ -22,6 +22,7 @@ var socket = io();
         var a = jQuery('<a target="_blank>My current location</a>');
 
         li.text(`${message.from}: `);
+        a.attr('href', message.url);
     });
 
     // socket.emit('createMessage', {
