@@ -56,6 +56,7 @@ var socket = io();
         locationButton.attr('disabled', 'disabled');
 
         navigator.geolocation.getCurrentPosition(function(position){
+            locationButton.removeAttr('disabled');
             socket.emit('createLocationMessage', {
                 latitude: position.coords.latitude,
                 longtitude: position.coords.longitude
