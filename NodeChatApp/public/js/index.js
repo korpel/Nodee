@@ -25,5 +25,7 @@ var socket = io();
         socket.emit('createMessage', {
             from: 'User',
             text: jQuery('[name=message]').val()
+        }, function (){
+            
         });
     });
