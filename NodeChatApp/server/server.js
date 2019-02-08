@@ -16,6 +16,10 @@ app.use(express.static(publicPath));
 io.on('connection',(socket)=>{
     console.log('new user connected');
 
+    socket.emit('newMessage', {
+
+    });
+
 
     socket.on('createMessage', (message) => {
         console.log('createMessage', message);
