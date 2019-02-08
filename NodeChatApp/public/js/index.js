@@ -41,7 +41,9 @@ var socket = io();
         }
 
         navigator.geolocation.getCurrentPosition(function(position){
-            console.log(position);
+            socket.emit('createLocationMessage'. {
+
+            });
         }, function (){
             alert('Unable to fecth location')
         });
