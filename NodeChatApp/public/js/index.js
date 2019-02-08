@@ -21,4 +21,8 @@ var socket = io();
 
     jQuery('#message-form').on('submit', function(e){
         e.preventDefault();
+
+        socket.emit('createMessage', {
+
+        });
     });
