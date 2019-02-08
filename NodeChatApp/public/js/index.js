@@ -41,7 +41,7 @@ var socket = io();
         }
 
         navigator.geolocation.getCurrentPosition(function(position){
-            socket.emit('createLocationMessage'. {
+            socket.emit('createLocationMessage', {
                 latitude: position.coords.latitude,
                 longtitude: position.coords.longitude
             });
