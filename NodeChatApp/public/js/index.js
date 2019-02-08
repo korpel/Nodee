@@ -33,3 +33,5 @@ var socket = io();
 
         });
     });
+
+    var locationButton = jQuery('#send-location')
