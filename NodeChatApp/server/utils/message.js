@@ -7,7 +7,11 @@ var generateMessage = (from, text) => {
 };
 
 var generateLocationMessage = (from, latitude, longtude) =>{
-
+    return {
+        from,
+        url: ``,
+        createdAt: new Date().getTime()
+    }
 };
 
 module.exports = {generateMessage, generateLocationMessage};
