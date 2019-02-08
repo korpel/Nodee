@@ -10,4 +10,4 @@ var generateLocationMessage = (from, latitude, longtude) =>{
 
 };
 
-module.exports = {generateMessage};
+module.exports = {generateMessage, generateLocationMessage};
