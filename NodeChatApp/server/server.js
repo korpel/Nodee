@@ -26,7 +26,9 @@ io.on('connection',(socket)=>{
         // });
 
         socket.broadcast.emit('newMessage'.{
-
+            from: message.from,
+            text: message.text,
+            createdAt: new Date().getTime()
         });
     });
    
