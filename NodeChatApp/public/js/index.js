@@ -12,7 +12,8 @@ var socket = io();
         console.log('newMessage', message);
         var li = jQuery('<li></li>');
         li.text(`${from}: ${message.text}`);
-        
+
+        jQuery('#messages').append(li);
     });
 
     socket.emit('createMessage', {
