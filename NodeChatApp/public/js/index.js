@@ -34,14 +34,16 @@ var socket = io();
     //     console.log('Got it', data);
     // });
 
+    var messageTextbox = jQuery('[name=message]')
+
     jQuery('#message-form').on('submit', function(e){
         e.preventDefault();
 
         socket.emit('createMessage', {
             from: 'User',
-            text: jQuery('[name=message]').val()
+            text: messageTextbox.val()
         }, function (){
-            jQuery('[name=message]').val('');
+            messageTextbox.val('');
         });
     });
 
