@@ -36,5 +36,7 @@ var socket = io();
 
     var locationButton = jQuery('#send-location');
     locationButton.on('click', function () {
-
+        if (!navigator.geolocation) {
+            return alert('Geolocation not supportd');
+        }
     });
