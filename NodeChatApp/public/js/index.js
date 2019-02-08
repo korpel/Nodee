@@ -40,5 +40,9 @@ var socket = io();
             return alert('Geolocation not supportd');
         }
 
-        navigator.geolocation.getCurrentPosition();
+        navigator.geolocation.getCurrentPosition(function(position){
+
+        }, function (){
+            alert('Unable to fecth location')
+        });
     });
