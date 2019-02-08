@@ -20,6 +20,8 @@ var socket = io();
     socket.on('newLocationMessage', function(message) {
         var li = jQuery('<li></li>');
         var a = jQuery('<a target="_blank>My current location</a>');
+
+        li.text(`${message.from}: `);
     });
 
     // socket.emit('createMessage', {
