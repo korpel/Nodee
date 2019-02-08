@@ -23,6 +23,7 @@ var socket = io();
 
         li.text(`${message.from}: `);
         a.attr('href', message.url);
+        li.append(a);
     });
 
     // socket.emit('createMessage', {
