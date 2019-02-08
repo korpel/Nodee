@@ -3,6 +3,7 @@ const http = require('http');
 const express = require('express');
 const socketIO = require('socket.io');
 
+
 const {generateMessage} = require('./utils/message')
 
 
@@ -36,6 +37,10 @@ io.on('connection',(socket)=>{
         // });
     });
    
+    socket.on('createLocationMessage', (coord)=>{
+
+    });
+
     socket.on('disconnect',()=>{
         console.log('User disconnected');
     });
