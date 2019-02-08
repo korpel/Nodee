@@ -23,6 +23,7 @@ var socket = io();
         e.preventDefault();
 
         socket.emit('createMessage', {
-
+            from: 'User',
+            text: jQuery('[name=message]').val()
         });
     });
