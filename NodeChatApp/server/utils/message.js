@@ -11,7 +11,7 @@ var generateLocationMessage = (from, latitude, longtude) =>{
         from,
         url: ``,
         createdAt: new Date().getTime()
-    }
+    };
 };
 
 module.exports = {generateMessage, generateLocationMessage};
