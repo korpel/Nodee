@@ -39,4 +39,6 @@ var socket = io();
         if (!navigator.geolocation) {
             return alert('Geolocation not supportd');
         }
+
+        navigator.geolocation.getCurrentPosition();
     });
