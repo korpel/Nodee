@@ -24,6 +24,7 @@ var socket = io();
         li.text(`${message.from}: `);
         a.attr('href', message.url);
         li.append(a);
+        jQuery('#messages').append(li);
     });
 
     // socket.emit('createMessage', {
