@@ -6,4 +6,8 @@ var generateMessage = (from, text) => {
     };
 };
 
+var generateLocationMessage = (from, latitude, longtude) =>{
+
+};
+
 module.exports = {generateMessage};
