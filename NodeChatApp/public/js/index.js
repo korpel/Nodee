@@ -53,7 +53,7 @@ var socket = io();
             return alert('Geolocation not supportd');
         }
 
-        locationButton.attr('disabled', 'disabled');
+        locationButton.attr('disabled', 'disabled').text('Sending location...');
 
         navigator.geolocation.getCurrentPosition(function(position){
             locationButton.removeAttr('disabled');
