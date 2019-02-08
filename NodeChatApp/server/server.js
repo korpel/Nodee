@@ -21,6 +21,10 @@ io.on('connection',(socket)=>{
         text: 'Welcome to the chat app'
     });
 
+    socket.broadcast.emit('newMessage',{
+
+    });
+
 
     socket.on('createMessage', (message) => {
         console.log('createMessage', message);
