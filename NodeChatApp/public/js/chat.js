@@ -16,7 +16,7 @@ function scrollToBottom() {
 };
 
     socket.on('connect', function (){
-        console.log('Connected to server');
+        var params = jQuery.deparam(window.location.search);
     });
 
     socket.on('disconnect', function () {
