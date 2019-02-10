@@ -31,7 +31,8 @@ var socket = io();
          var html = Mustache.render(template,{
            text: message.text,
            from:message.from,
-           createdAt:formattedTime
+           createdAt:formattedTime,
+           url: message.url
          });
         jQuery('#messages').append(html);
         
