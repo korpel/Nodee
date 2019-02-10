@@ -9,11 +9,13 @@ var socket = io();
     });
 
     socket.on('newMessage', function (message){
-        var formattedTime = moment(message.createdAt).format('h:mm a');
-        var li = jQuery('<li></li>');
-        li.text(`${message.from} ${formattedTime}: ${message.text}`);
+       var template = jQuery('#message-template');
+       
+        // var formattedTime = moment(message.createdAt).format('h:mm a');
+        // var li = jQuery('<li></li>');
+        // li.text(`${message.from} ${formattedTime}: ${message.text}`);
 
-        jQuery('#messages').append(li);
+        // jQuery('#messages').append(li);
     });
 
 
