@@ -1,6 +1,7 @@
 var socket = io();
 
 function scrollToBottom() {
+    var messages = jQuery('#messages');
 
 };
 
