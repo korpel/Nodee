@@ -24,7 +24,9 @@ io.on('connection',(socket)=>{
     socket.broadcast.emit('newMessage',generateMessage('Admin','New user joined'));
 
 
-    socket.on('join')
+    socket.on('join', (params, callback) =>{
+
+    });
 
 
     socket.on('createMessage', (message, callback) => {
