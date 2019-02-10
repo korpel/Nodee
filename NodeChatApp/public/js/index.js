@@ -1,3 +1,5 @@
+import moment = require("moment");
+
 var socket = io();
 
     socket.on('connect', function (){
@@ -9,6 +11,7 @@ var socket = io();
     });
 
     socket.on('newMessage', function (message){
+        var formattedTime = moment(message.createdAt).format();
         console.log('newMessage', message);
         var li = jQuery('<li></li>');
         li.text(`${message.from}: ${message.text}`);
