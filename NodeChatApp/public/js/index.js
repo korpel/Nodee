@@ -10,7 +10,7 @@ function scrollToBottom() {
     var lastMessageHeight = newMessage.prev().innerHeight();
 
     if (clientHeight+screenTop  +newMessageHeight + lastMessageHeight>= scrollHeight) {
-
+        console.log('Should scroll');
     }
 
 };
