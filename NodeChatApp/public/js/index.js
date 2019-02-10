@@ -13,7 +13,8 @@ var socket = io();
         var template = jQuery('#message-template').html();
          var html = Mustache.render(template,{
            text: message.text,
-           from:message.from
+           from:message.from,
+           createdAt:formattedTime
          });
         jQuery('#messages').append(html);
        
