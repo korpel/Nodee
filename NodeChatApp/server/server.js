@@ -5,6 +5,7 @@ const socketIO = require('socket.io');
 
 
 const {generateMessage, generateLocationMessage} = require('./utils/message')
+const {isRealString}= require('./utils/validation')
 
 
 const publicPath = path.join(__dirname,'../public');
