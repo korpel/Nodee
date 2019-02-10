@@ -10,7 +10,9 @@ var socket = io();
 
     socket.on('newMessage', function (message){
        var template = jQuery('#message-template').html();
-       var html = Mustache.render(template);
+       var html = Mustache.render(template,{
+           
+       });
        jQuery('#messages').append(html);
        
         // var formattedTime = moment(message.createdAt).format('h:mm a');
