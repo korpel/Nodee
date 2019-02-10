@@ -1,5 +1,9 @@
 var socket = io();
 
+function scrollToBottom() {
+
+};
+
     socket.on('connect', function (){
         console.log('Connected to server');
     });
