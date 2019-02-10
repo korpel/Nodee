@@ -1,5 +1,3 @@
-var moment = require("moment");
-
 var socket = io();
 
     socket.on('connect', function (){
