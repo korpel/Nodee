@@ -40,6 +40,8 @@ function scrollToBottom() {
            url: message.url
          });
         jQuery('#messages').append(html);
+
+        scrollToBottom();
         
         
         // var li = jQuery('<li></li>');
