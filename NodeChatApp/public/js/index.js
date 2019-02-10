@@ -29,7 +29,6 @@ var socket = io();
         var formattedTime = moment(message.createdAt).format('h:mm a');
         var template = jQuery('#location-message-template').html();
          var html = Mustache.render(template,{
-           text: message.text,
            from:message.from,
            createdAt:formattedTime,
            url: message.url
