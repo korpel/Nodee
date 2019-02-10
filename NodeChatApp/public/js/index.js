@@ -21,6 +21,8 @@ function scrollToBottom() {
            createdAt:formattedTime
          });
         jQuery('#messages').append(html);
+
+        scrollToBottom();
        
         // var li = jQuery('<li></li>');
         // li.text(`${message.from} ${formattedTime}: ${message.text}`);
