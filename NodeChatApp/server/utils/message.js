@@ -9,12 +9,19 @@ var generateMessage = (from, text) => {
     };
 };
 
-var generateLocationMessage = (from, latitude, longitude) =>{
+// var generateLocationMessage = (from, latitude, longitude) =>{
+//     return {
+//         from,
+//         url: `https://google.com/maps?q=${latitude},${longitude}`,
+//         createdAt: moment().valueOf()
+//     };
+//};
+var generateLocationMessage = (from, latitude, longitude) => {
     return {
-        from,
-        url: `https://google.com/maps?q=${latitude},${longitude}`,
-        createdAt: moment().valueOf()
+      from,
+      url: `https://www.google.com/maps?q=${latitude},${longitude}`,
+      createdAt: moment().valueOf()
     };
-};
+  };
 
 module.exports = {generateMessage, generateLocationMessage};
