@@ -26,7 +26,9 @@ io.on('connection',(socket)=>{
 
 
     socket.on('join', (params, callback) =>{
-        if (!isRealString(params.name) || (!isRealString(params.room)))
+        if (!isRealString(params.name) || (!isRealString(params.room)) {
+            
+        }
     });
 
 
