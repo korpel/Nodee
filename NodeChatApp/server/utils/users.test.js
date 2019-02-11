@@ -1,4 +1,4 @@
-const expext = require('expect');
+const expect = require('expect');
 
 const {Users} = require('./users')
 
