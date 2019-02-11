@@ -22,6 +22,11 @@ describe('Users', ()=>{
     }]
     });
 
+
+    it('Should remove a user',()=>{
+
+    });
+
     it('Should add new user', ()=>{
         var users = new Users();
         var user = {
