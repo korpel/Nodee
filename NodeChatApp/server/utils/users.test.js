@@ -11,5 +11,7 @@ describe('Users', ()=>{
             room: 'The Office Fans'
         };
         var resUser = users.addUser(user.id, user.name, user.room);
+
+        expext(users.users).toEqual([user]);
     });
 });
