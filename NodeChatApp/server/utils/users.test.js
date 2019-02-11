@@ -39,7 +39,7 @@ describe('Users', ()=>{
     it('Should not find user',()=>{
         var userId = '99';
         var user = users.getUser(userId);
-        expect(user).noNotExist();
+        expect(user).toNotExist();
 
     });
 
