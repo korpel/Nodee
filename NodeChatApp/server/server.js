@@ -25,7 +25,8 @@ io.on('connection', (socket) => {
       callback('Name and room name are required.');
     }
 
-    socket.join(params.room);
+      socket.join(params.room);
+      users.addUser(socket.id, params.name, params.room);
 
   socket.emit('newMessage', generateMessage('Admin', 'Welcome to the chat app'));
 
