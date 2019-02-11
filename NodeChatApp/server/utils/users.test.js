@@ -14,7 +14,7 @@ describe('Users', ()=>{
         },{
         id: '2',
         name:'Tony',
-        room: 'Node'
+        room: 'React'
     },{
         id: '3',
         name:'Kwstas',
@@ -36,5 +36,7 @@ describe('Users', ()=>{
 
     it('Should return names for node course', () => {
         var userList = users.getUserList('Node');
+
+        expect(userList).toEqual(['Mike','Kwstas']);
     });
 });
