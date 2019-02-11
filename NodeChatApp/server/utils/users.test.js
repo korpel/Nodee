@@ -6,9 +6,9 @@ describe('Users', ()=>{
     var users;
 
     beforeEach(()=>{
-
+        users = new Users();
     });
-    
+
     it('Should add new user', ()=>{
         var users = new Users();
         var user = {
