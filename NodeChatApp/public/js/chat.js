@@ -34,7 +34,7 @@ socket.on('disconnect', function () {
 });
 
 
-socket.on('updateUserList', function(){
+socket.on('updateUserList', function (users){
 
 });
 
