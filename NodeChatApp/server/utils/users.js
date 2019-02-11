@@ -16,9 +16,7 @@ class Users {
 
     }
     getUserList (room) {
-        var users = this.users.filter((user)=>{
-
-        });
+        var users = this.users.filter((user)=> user.room === room );
     }
 }
 
