@@ -1,6 +1,6 @@
 
 
-class User {
+class Users {
     constructor(){
         this.users = []
     }
@@ -10,3 +10,6 @@ class User {
         return user;
     }
 }
+
+
+module.exports= {Users};
