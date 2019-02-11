@@ -34,6 +34,7 @@ describe('Users', ()=>{
     it('Should find user',()=>{
         var userId = '2';
         var user = users.getUser(userId);
+        expect(user.id).toBe(userId)
     });
     it('Should not find user',()=>{
 
