@@ -35,6 +35,6 @@ describe('Users', ()=>{
     });
 
     it('Should return names for node course', () => {
-
+        var userList = users.getUserList('Node');
     });
 });
