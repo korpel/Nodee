@@ -32,7 +32,8 @@ describe('Users', ()=>{
     });
 
     it('Should find user',()=>{
-
+        var userId = '2';
+        var user = users.getUser(userId);
     });
     it('Should not find user',()=>{
 
