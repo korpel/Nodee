@@ -1,6 +1,7 @@
 
 
+class User {
+    constructor(){
 
-class Person {
-
+    };
 }
