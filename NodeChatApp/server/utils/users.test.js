@@ -31,7 +31,7 @@ describe('Users', ()=>{
         };
         var resUser = users.addUser(user.id, user.name, user.room);
 
-        expext(users.users).toEqual([user]);
+        expect(users.users).toEqual([user]);
     });
 
     it('Should return names for node course', () => {
