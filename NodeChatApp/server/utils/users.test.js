@@ -7,6 +7,19 @@ describe('Users', ()=>{
 
     beforeEach(()=>{
         users = new Users();
+        users.users = [{
+            id: '1',
+            name:'Mike',
+            room: 'Node'
+        },{
+        id: '2',
+        name:'Tony',
+        room: 'Node'
+    },{
+        id: '3',
+        name:'Kwstas',
+        room: 'Node'
+    }]
     });
 
     it('Should add new user', ()=>{
