@@ -35,7 +35,7 @@ io.on('connection', (socket) => {
   });
 
   socket.on('createMessage', (message, callback) => {
-    console.log('createMessage', message);
+    var user = users.getUser(socket.id);
     io.emit('newMessage', generateMessage(message.from, message.text));
     callback();
   });
