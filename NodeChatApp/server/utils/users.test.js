@@ -37,7 +37,8 @@ describe('Users', ()=>{
         expect(user.id).toBe(userId)
     });
     it('Should not find user',()=>{
-
+        var userId = '99';
+        
     });
 
     it('Should add new user', ()=>{
