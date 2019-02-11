@@ -5,5 +5,10 @@ const {Users} = require('./users')
 describe('Users', ()=>{
     it('Should add new user', ()=>{
         var users = new Users();
+        var user = {
+            id: '123',
+            name: 'Andrew',
+            room: 'The Office Fans'
+        }
     });
 });
