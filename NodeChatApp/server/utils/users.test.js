@@ -27,6 +27,7 @@ describe('Users', ()=>{
         var userId = '1'
         var user = users.removeUser(userId);
         expect(user.id).toBe(userId);
+        expect(users.users.length).toBe(2);
     });
 
     it('Should not remove user', ()=>{
