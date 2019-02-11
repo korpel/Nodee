@@ -22,14 +22,16 @@ io.on('connection', (socket) => {
       callback('Name and room name are required.');
     }
 
-    callback();
-  });
-
-  socket.join(params.room);
+    socket.join(params.room);
 
   socket.emit('newMessage', generateMessage('Admin', 'Welcome to the chat app'));
 
   socket.broadcast.to(params.room).emit('newMessage', generateMessage('Admin', `${params.name} has joined`));
+
+    callback();
+  });
+
+  
 
   socket.on('createMessage', (message, callback) => {
     console.log('createMessage', message);
