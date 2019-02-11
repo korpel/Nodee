@@ -31,7 +31,10 @@ describe('Users', ()=>{
     });
 
     it('Should not remove user', ()=>{
-
+        var userId = '99'
+        var user = users.removeUser(userId);
+        expect(user.id).toBe(userId);
+        expect(users.users.length).toBe(3);
     });
 
     it('Should find user',()=>{
