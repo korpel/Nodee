@@ -45,7 +45,7 @@ io.on('connection', (socket) => {
   socket.on('createLocationMessage', (coords) => {
     var user = users.getUser(socket.id);
     if (user){
-      io.to(user.room).emit('newLocationMessage', generateLocationMessage(user.name , coords.latitude, coords.longitude));
+      io.to(user.room).emit('newLocationMessage', generateLocationMessage(user.name, coords.latitude, coords.longitude));
     }
     
   });
