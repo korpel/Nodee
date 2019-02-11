@@ -28,6 +28,8 @@ io.on('connection', (socket) => {
     callback();
   });
 
+  socket.join(params.room);
+
   socket.on('createMessage', (message, callback) => {
     console.log('createMessage', message);
     io.emit('newMessage', generateMessage(message.from, message.text));
