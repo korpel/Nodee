@@ -9,6 +9,7 @@ describe('Users', ()=>{
             id: '123',
             name: 'Andrew',
             room: 'The Office Fans'
-        }
+        };
+        var resUser = users.addUser(user.id, user.name, user.room);
     });
 });
