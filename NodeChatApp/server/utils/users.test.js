@@ -3,6 +3,12 @@ const expext = require('expect');
 const {Users} = require('./users')
 
 describe('Users', ()=>{
+    var users;
+
+    beforeEach(()=>{
+
+    });
+    
     it('Should add new user', ()=>{
         var users = new Users();
         var user = {
