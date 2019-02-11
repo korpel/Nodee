@@ -31,6 +31,10 @@ describe('Users', ()=>{
 
     });
 
+    it('Should find user',()=>{
+
+    });
+
     it('Should add new user', ()=>{
         var users = new Users();
         var user = {
