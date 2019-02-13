@@ -8,3 +8,7 @@ const getExhangeRate = (from, to)=> {
         return rate;
     });
 };
+
+getExhangeRate('USD', 'CAD').then((rate)=>{
+    console.log(rate);
+});
