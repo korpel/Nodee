@@ -11,6 +11,6 @@ const users = [{
 }];
 const grades = [];
 
-const getUsers (id) =>{
+const getUsers = (id) =>{
 
 };
