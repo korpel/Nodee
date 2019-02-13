@@ -36,6 +36,10 @@ const getUser = (id) =>{
     });
 };
 
+const getGrades = ((schoolId)=>{
+
+});
+
 getUser(1).then((user)=>{
     console.log(user);
 }).catch((e)=>{
