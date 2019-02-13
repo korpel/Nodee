@@ -83,8 +83,8 @@ const getStatusAlt = async (userId) => {
             return `${user.name} has a ${average} in the class`
 };
 
-getStatusAlt(2).then((name)=>{
-    console.log(name);
+getStatusAlt(2).then((status)=>{
+    console.log(status);
 }).catch((e)=>{
     console.log(e);
 });
