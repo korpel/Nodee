@@ -9,7 +9,19 @@ const users = [{
     name: 'Tony',
     schoolId: 293
 }];
-const grades = [];
+const grades = [{
+    id : 1,
+    schoolId: 101,
+    grade: 90
+}, {
+    id : 1,
+    schoolId: 101,
+    grade: 90
+}, {
+    id : 1,
+    schoolId: 101,
+    grade: 90
+}];
 
 const getUser = (id) =>{
     return new Promise((resolve, reject)=>{
