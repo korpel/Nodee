@@ -73,7 +73,8 @@ const getStatus = ((userId)=>{
 
 
 const getStatusAlt = async (userId) => {
-
+    const user = await getUser(userId);
+    
 };
 
 getStatusAlt().then((name)=>{
