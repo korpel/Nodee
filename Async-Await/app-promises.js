@@ -51,6 +51,10 @@ const getStatus = ((userId)=>{
         user = tempUser
         return getGrades(user.schoolId).then((grades)=>{
             let average = 0;
+
+            if (grades.length > 0) {
+                
+            }
         });
     });
 });
