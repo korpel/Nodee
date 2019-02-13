@@ -43,7 +43,7 @@ const getGrades = ((schoolId)=>{
 });
 
 
-getGrades(101).then(()=>{
+getGrades(101).then((grades)=>{
     console.log(grades);
 }).catch((e)=>{
     console.log(e);
