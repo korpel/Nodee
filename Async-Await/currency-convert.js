@@ -2,6 +2,7 @@ const {key, url} = require('./my-key');
 const axios = require('axios');
 
 
+
 // const getExhangeRate =  (from, to) => {
 //   return  axios.get(url).then((response)=>{
 //         const euro = 1 / response.data.rates[from];
@@ -18,14 +19,16 @@ const getExhangeRate =  async (from, to) => {
   };
 
 const getCountries = async (currencyCode)=>{
-    let countryUrl = `https://restcountries.eu/rest/v2/currency/{currencyCode}`;
-    const response = await url.get(countryUrl);
+    let countryUrl = `https://restcountries.eu/rest/v2/currency/${currencyCode}`;
+    const response = await axios.get(countryUrl);
     return response.data.map((country)=>country.name);
 
 
 };
 
-getCountries('USD');
+getCountries('USD').then((countries)=>{
+    console.log(countries);
+});
 
 getExhangeRate('USD', 'CAD').then((rate)=>{
     console.log(rate);
