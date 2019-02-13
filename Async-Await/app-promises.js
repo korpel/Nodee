@@ -14,13 +14,13 @@ const grades = [{
     schoolId: 101,
     grade: 90
 }, {
-    id : 1,
-    schoolId: 101,
-    grade: 90
+    id : 2,
+    schoolId: 293,
+    grade: 100
 }, {
-    id : 1,
+    id : 3,
     schoolId: 101,
-    grade: 90
+    grade: 80
 }];
 
 const getUser = (id) =>{
