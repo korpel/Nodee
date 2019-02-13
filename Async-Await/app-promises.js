@@ -61,7 +61,7 @@ const getStatus = ((userId)=>{
 });
 
 const getStatusAlt = async (userId) => {
-
+    throw new Error('This is an error');
     return 'Mike'
 };
 
