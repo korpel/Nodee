@@ -42,6 +42,11 @@ const getGrades = ((schoolId)=>{
     });
 });
 
+
+getGrades(101).then(()=>{
+
+});
+
 getUser(1).then((user)=>{
     console.log(user);
 }).catch((e)=>{
