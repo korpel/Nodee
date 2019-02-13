@@ -62,6 +62,8 @@ const getStatus = ((userId)=>{
 
 getStatus(1).then((status)=>{
     console.log(status);
+}).catch((e)=>{
+    console.log(e);
 });
 
 getGrades(101).then((grades)=>{
