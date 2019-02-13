@@ -47,8 +47,11 @@ const getGrades = ((schoolId)=>{
 
 const getStatus = ((userId)=>{
     let user;
-    return getUser(userId).then(()=>{
+    return getUser(userId).then((tempUser)=>{
+        user = tempUser
+        return getGrades(user.schoolId).then((grades)=>{
 
+        });
     });
 });
 
