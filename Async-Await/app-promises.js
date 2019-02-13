@@ -61,7 +61,7 @@ const getStatus = ((userId)=>{
 });
 
 const getStatusAlt = async (userId) => {
-
+    return 'Mike'
 };
 
 // getStatus(2).then((status)=>{
