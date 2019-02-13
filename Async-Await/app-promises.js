@@ -80,7 +80,7 @@ const getStatusAlt = async (userId) => {
     if (grades.length > 0) {
        average = grades.map((grade) => grade.grade).reduce((a,b)=> a+b)/ grades.length;
         }
-    return `${user.name} has a ${average} in the class`
+        return `${user.name} has a ${average} in the class`
 };
 
 getStatusAlt(2).then((status)=>{
