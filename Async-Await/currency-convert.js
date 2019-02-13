@@ -1,4 +1,5 @@
 const {key, url} = require('./my-key');
+const axios = require('axios');
 
 
 const getExhangeRate = (from, to)=> {
