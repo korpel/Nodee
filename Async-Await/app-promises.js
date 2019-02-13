@@ -44,7 +44,9 @@ const getGrades = ((schoolId)=>{
 
 
 getGrades(101).then(()=>{
-
+    console.log(grades);
+}).catch((e)=>{
+    console.log(e);
 });
 
 getUser(1).then((user)=>{
