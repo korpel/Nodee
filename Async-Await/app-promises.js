@@ -10,3 +10,7 @@ const users = [{
     schoolId: 293
 }];
 const grades = [];
+
+const getUsers (id) =>{
+
+};
