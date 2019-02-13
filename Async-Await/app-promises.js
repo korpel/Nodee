@@ -50,7 +50,7 @@ const getStatus = ((userId)=>{
     return getUser(userId).then((tempUser)=>{
         user = tempUser
         return getGrades(user.schoolId).then((grades)=>{
-
+            let average = 0;
         });
     });
 });
