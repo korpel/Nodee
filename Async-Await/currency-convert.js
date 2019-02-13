@@ -5,7 +5,7 @@ const axios = require('axios');
 const getExhangeRate = (from, to)=> {
   return  axios.get(url).then(()=>{
         const euro = 1 / response.data.rates[from];
-        const rate = euro * response.data.rats[to];
+        const rate = euro * response.data.rates[to];
         return rate;
     });
 };
