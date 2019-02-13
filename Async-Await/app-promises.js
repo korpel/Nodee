@@ -60,9 +60,20 @@ const getStatus = ((userId)=>{
     });
 });
 
+// const getStatusAlt = async (userId) => {
+//     throw new Error('This is an error');
+//     return 'Mike'
+// };
+
+// getStatusAlt().then((name)=>{
+//     console.log(name);
+// }).catch((e)=>{
+//     console.log(e);
+// });
+
+
 const getStatusAlt = async (userId) => {
-    throw new Error('This is an error');
-    return 'Mike'
+
 };
 
 getStatusAlt().then((name)=>{
