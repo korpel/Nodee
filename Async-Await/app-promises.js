@@ -67,7 +67,7 @@ const getStatusAlt = async (userId) => {
 
 getStatusAlt().then((name)=>{
     console.log(name);
-})
+});
 
 // getStatus(2).then((status)=>{
 //     console.log(status);
