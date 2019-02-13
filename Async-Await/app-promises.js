@@ -53,7 +53,7 @@ const getStatus = ((userId)=>{
             let average = 0;
 
             if (grades.length > 0) {
-                average = grades.map((grade)=> grade.grade).reduce((a,b)=> a+b)/
+                average = grades.map((grade)=> grade.grade).reduce((a,b)=> a+b)/ grades.length;
             }
         });
     });
