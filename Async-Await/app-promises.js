@@ -25,5 +25,7 @@ const getUser = (id) =>{
 };
 
 getUser(2).then((user)=>{
-
+    console.log(user.);
+}).catch((e)=>{
+    
 });
