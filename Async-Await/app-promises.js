@@ -45,6 +45,10 @@ const getGrades = ((schoolId)=>{
 });
 
 
+const getStatus = ((userId)=>{
+
+});
+
 getGrades(101).then((grades)=>{
     console.log(grades);
 }).catch((e)=>{
