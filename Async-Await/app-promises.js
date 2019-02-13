@@ -46,7 +46,7 @@ const getGrades = ((schoolId)=>{
 
 
 const getStatus = ((userId)=>{
-
+    let user;
 });
 
 getGrades(101).then((grades)=>{
