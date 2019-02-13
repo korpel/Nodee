@@ -60,7 +60,7 @@ const getStatus = ((userId)=>{
     });
 });
 
-getStatus(1).then((status)=>{
+getStatus(2).then((status)=>{
     console.log(status);
 }).catch((e)=>{
     console.log(e);
