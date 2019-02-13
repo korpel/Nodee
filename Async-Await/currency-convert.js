@@ -1,1 +1,1 @@
-const {key} = require(./my-key);
+const {key} = require('./my-key');
