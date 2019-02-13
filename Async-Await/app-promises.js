@@ -60,20 +60,24 @@ const getStatus = ((userId)=>{
     });
 });
 
-getStatus(2).then((status)=>{
-    console.log(status);
-}).catch((e)=>{
-    console.log(e);
-});
+const getStatusAlt = async (userId) => {
 
-getGrades(101).then((grades)=>{
-    console.log(grades);
-}).catch((e)=>{
-    console.log(e);
-});
+};
 
-getUser(1).then((user)=>{
-    console.log(user);
-}).catch((e)=>{
-    console.log(e);
-});
+// getStatus(2).then((status)=>{
+//     console.log(status);
+// }).catch((e)=>{
+//     console.log(e);
+// });
+
+// getGrades(101).then((grades)=>{
+//     console.log(grades);
+// }).catch((e)=>{
+//     console.log(e);
+// });
+
+// getUser(1).then((user)=>{
+//     console.log(user);
+// }).catch((e)=>{
+//     console.log(e);
+// });
