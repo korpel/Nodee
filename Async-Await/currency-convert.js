@@ -17,8 +17,10 @@ const getExhangeRate =  async (from, to) => {
           return rate;
   };
 
-const getCountries = (currencyCode)=>{
-    let url = `https://restcountries.eu/rest/v2/currency/{currencyCode}`;
+const getCountries = async (currencyCode)=>{
+    let countryUrl = `https://restcountries.eu/rest/v2/currency/{currencyCode}`;
+    const response = await url.get(countryUrl);
+
 
 };
 
