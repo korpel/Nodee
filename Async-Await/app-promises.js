@@ -37,7 +37,9 @@ const getUser = (id) =>{
 };
 
 const getGrades = ((schoolId)=>{
+    return new Promise((resolve,reject)=>{
 
+    });
 });
 
 getUser(1).then((user)=>{
