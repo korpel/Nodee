@@ -64,6 +64,7 @@ const getStatusAlt = async (userId) => {
     return 'Mike'
 };
 
+console.log(getStatus());
 // getStatus(2).then((status)=>{
 //     console.log(status);
 // }).catch((e)=>{
