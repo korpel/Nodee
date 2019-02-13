@@ -38,7 +38,7 @@ const getUser = (id) =>{
 
 const getGrades = ((schoolId)=>{
     return new Promise((resolve,reject)=>{
-
+        resolve(grades.filter((grade)=>grade.schoolId === schoolId))
     });
 });
 
