@@ -20,9 +20,12 @@ const getExhangeRate =  async (from, to) => {
 const getCountries = async (currencyCode)=>{
     let countryUrl = `https://restcountries.eu/rest/v2/currency/{currencyCode}`;
     const response = await url.get(countryUrl);
+    return response.data.map((country)=>country.name);
 
 
 };
+
+getCountries('USD');
 
 getExhangeRate('USD', 'CAD').then((rate)=>{
     console.log(rate);
