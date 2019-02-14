@@ -120,7 +120,7 @@ app.patch('/todos/:id', authenticate,  (req,res) => {
 
 });
 
-app.post('/users', (req,res)=>{
+app.post('/users', async (req,res)=>{
     var body = _.pick(req.body, ['email', 'password']);
     var user = new User(body);
 
