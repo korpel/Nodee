@@ -142,7 +142,8 @@ app.get('/users/me',authenticate, (req, res)=>{
 app.post('/users/login', async (req,res) =>{ 
     const body = _.pick(req.body, ['email', 'password']);
     const user = await User.findByCredentials(body.email, body.password);
-
+    const token = await user.generateAuthToken();
+    
     User.findByCredentials(body.email, body.password).then((user)=>{
         user.generateAuthToken().then((token)=>{
             res.header('x-auth', token).send(user);
