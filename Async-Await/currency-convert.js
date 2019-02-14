@@ -42,7 +42,7 @@ const convertCurrency = async (from,to,amount) => {
     return `${amount} ${from} is worth ${convertedAmount} ${to}. You can spend it in the following countries ${countries.join(', ')}`;
 };
 
-convertCurrency('USD', 'Cad', 20).then((message)=>{
+convertCurrency('USD', 'CAD', 20).then((message)=>{
     console.log(message);
 });
 
