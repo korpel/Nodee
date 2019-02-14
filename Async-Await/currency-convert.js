@@ -27,8 +27,9 @@ const getCountries = async (currencyCode)=>{
 };
 
 const convertCurrency = (from,to,amount) => {
+    let convertedAmount;
     getExhangeRate(from,to).then((rate)=> {
-        const convertedAmount = (amount*rate).toFixed(2);
+         convertedAmount = (amount*rate).toFixed(2);
         console.log(convertedAmount);
         return getCountries(to)
     }).then((countries)=>{
