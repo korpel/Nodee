@@ -34,7 +34,7 @@ const convertCurrency = (from,to,amount) => {
         return getCountries(to)
     }).then((countries)=>{
         console.log(countries);
-        return ``;
+        return `${amount} from ${from} is worth ${convertedAmount} ${to}. You can spend it in the following countries ${countries}`;
     });
 };
 
