@@ -121,8 +121,8 @@ app.patch('/todos/:id', authenticate,  (req,res) => {
 });
 
 app.post('/users', async (req,res)=>{
-    var body = _.pick(req.body, ['email', 'password']);
-    var user = new User(body);
+    const body = _.pick(req.body, ['email', 'password']);
+    const user = new User(body);
 
     user.save().then(()=>{
         return user.generateAuthToken();
