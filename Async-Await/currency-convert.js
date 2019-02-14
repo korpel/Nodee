@@ -54,3 +54,8 @@ convertCurrency('USD', 'CAD', 20).then((message)=>{
 // getExhangeRate('USD', 'CAD').then((rate)=>{
 //     console.log(rate);
 // });
+
+
+const doWork = async ()=>{
+
+};
