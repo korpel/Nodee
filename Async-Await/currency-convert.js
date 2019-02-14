@@ -30,10 +30,8 @@ const convertCurrency = (from,to,amount) => {
     let convertedAmount;
     return getExhangeRate(from,to).then((rate)=> {
         convertedAmount = (amount*rate).toFixed(2);
-        console.log(convertedAmount);
         return getCountries(to)
     }).then((countries)=>{
-        console.log(countries);
         return `${amount} from ${from} is worth ${convertedAmount} ${to}. You can spend it in the following countries ${countries.join(', ')}`;
     });
 };
