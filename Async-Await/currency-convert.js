@@ -19,7 +19,7 @@ const getExhangeRate =  async (from, to) => {
         const rate = euro * response.data.rates[to];
         return rate;
     } catch (e) {
-        throw new Error('Kati problima epaikse sth metatropi');
+        throw new Error(`Unable to get exchange rate from ${from} and ${to}.`);
     }
   };
 
