@@ -57,5 +57,9 @@ convertCurrency('USD', 'CAD', 20).then((message)=>{
 
 
 const doWork = async ()=>{
-
+    return 10;
 };
+
+doWork().then((data)=>{
+
+});
