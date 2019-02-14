@@ -32,7 +32,7 @@ const convertCurrency = (from,to,amount) => {
         convertedAmount = (amount*rate).toFixed(2);
         return getCountries(to)
     }).then((countries)=>{
-        return `${amount} from ${from} is worth ${convertedAmount} ${to}. You can spend it in the following countries ${countries.join(', ')}`;
+        return `${amount} ${from} is worth ${convertedAmount} ${to}. You can spend it in the following countries ${countries.join(', ')}`;
     });
 };
 
