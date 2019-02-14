@@ -33,10 +33,13 @@ const convertCurrency = (from,to,amount) => {
     });
 };
 
-getCountries('EUR').then((countries)=>{
-    console.log(countries);
-});
+convertCurrency('USD', 'CAD', 20);
 
-getExhangeRate('USD', 'CAD').then((rate)=>{
-    console.log(rate);
-});
+
+// getCountries('EUR').then((countries)=>{
+//     console.log(countries);
+// });
+
+// getExhangeRate('USD', 'CAD').then((rate)=>{
+//     console.log(rate);
+// });
