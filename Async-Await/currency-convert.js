@@ -60,7 +60,8 @@ convertCurrency('USD', 'CAD', 20).then((message)=>{
 const add = async (a,b)=> a+b
 
 const doWork = async ()=>{
-    return tony;
+    const result = await add(12,13)
+    return result
 };
 
 doWork().then((data)=>{
