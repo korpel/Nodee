@@ -57,6 +57,7 @@ convertCurrency('USD', 'CAD', 20).then((message)=>{
 //     console.log(rate);
 // });
 
+const add = async (a,b)=> a+b
 
 const doWork = async ()=>{
     return tony;
