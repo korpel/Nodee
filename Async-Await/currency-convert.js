@@ -62,4 +62,6 @@ const doWork = async ()=>{
 
 doWork().then((data)=>{
     console.log(data);
+}).catch((e)=>{
+    console.log('Something went wrong')
 });
