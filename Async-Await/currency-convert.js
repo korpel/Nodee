@@ -16,6 +16,11 @@ const getExhangeRate =  async (from, to) => {
           const euro = 1 / response.data.rates[from];
           const rate = euro * response.data.rates[to];
           return rate;
+    try {
+
+    } catch {
+        
+    }
   };
 
 const getCountries = async (currencyCode)=>{
