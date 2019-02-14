@@ -36,7 +36,9 @@ const convertCurrency = (from,to,amount) => {
     });
 };
 
-convertCurrency('USD', 'CAD', 20);
+convertCurrency('USD', 'CAD', 20).then((message)=>{
+    console.log(message);
+});
 
 
 // getCountries('EUR').then((countries)=>{
