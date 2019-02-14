@@ -61,5 +61,5 @@ const doWork = async ()=>{
 };
 
 doWork().then((data)=>{
-
+    console.log(data);
 });
