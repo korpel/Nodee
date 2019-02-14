@@ -154,6 +154,12 @@ app.post('/users/login',(req,res) =>{
 });
 
 app.delete('/users/me/token', authenticate, async (req,res)=>{
+    try {
+        await req.user.removeToken(req.token);
+        res.status(200).send();
+    } catch (e) {
+
+    }
     req.user.removeToken(req.token).then(()=>{
         res.status(200).send();
     },()=>{
