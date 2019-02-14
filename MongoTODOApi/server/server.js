@@ -149,16 +149,6 @@ app.post('/users/login', async (req,res) =>{
     } catch(e){
         res.status(400).send();
     }
-    
-    User.findByCredentials(body.email, body.password).then((user)=>{
-        user.generateAuthToken().then((token)=>{
-            res.header('x-auth', token).send(user);
-        });
-    }).catch((e)=>{
-        
-
-    });
-
 });
 
 app.delete('/users/me/token', authenticate, async (req,res)=>{
