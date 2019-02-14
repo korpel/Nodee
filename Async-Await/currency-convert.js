@@ -29,6 +29,11 @@ const getExhangeRate =  async (from, to) => {
   };
 
 const getCountries = async (currencyCode)=>{
+    try {
+
+    } catch(e) {
+        
+    }
     let countryUrl = `https://restcountries.eu/rest/v2/currency/${currencyCode}`;
     const response = await axios.get(countryUrl);
     return response.data.map((country)=>country.name);
