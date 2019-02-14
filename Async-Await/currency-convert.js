@@ -57,20 +57,28 @@ convertCurrency('USD', 'CAD', 20).then((message)=>{
 //     console.log(rate);
 // });
 
-const add = async (a,b)=> a+b+c
 
-const doWork = async ()=>{
-    try {
-        const result = await add(12,13)
-        return result
-    } catch (e) {
-        return 10
-    }
+
+
+
+
+
+
+
+// const add = async (a,b)=> a+b+c
+
+// const doWork = async ()=>{
+//     try {
+//         const result = await add(12,13)
+//         return result
+//     } catch (e) {
+//         return 10
+//     }
   
-};
+// };
 
-doWork().then((data)=>{
-    console.log(data);
-}).catch((e)=>{
-    console.log('Something went wrong')
-});
+// doWork().then((data)=>{
+//     console.log(data);
+// }).catch((e)=>{
+//     console.log('Something went wrong')
+// });
