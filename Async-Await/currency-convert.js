@@ -36,9 +36,6 @@ const getCountries = async (currencyCode)=>{
     } catch(e) {
         throw new Error(`Unable to get countries that use ${currencyCode}`);
     }
-
-
-
 };
 
 // const convertCurrency = (from,to,amount) => {
