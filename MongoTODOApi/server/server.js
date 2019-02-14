@@ -80,6 +80,10 @@ app.delete('/todos/:id', authenticate, async (req, res) => {
         _id: id,
         _creator: req.user._id
     })
+    if (!todo) {
+        return res.status(404).send();
+    }
+    res.send({todo});
 
     Todo.findOneAndRemove({
         _id: id,
