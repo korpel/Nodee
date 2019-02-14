@@ -144,13 +144,18 @@ app.post('/users/login', async (req,res) =>{
     const user = await User.findByCredentials(body.email, body.password);
     const token = await user.generateAuthToken();
     res.header('x-auth', token).send(user);
+    try {
+
+    } catch(e){
+        res.status(400).send();
+    }
     
     User.findByCredentials(body.email, body.password).then((user)=>{
         user.generateAuthToken().then((token)=>{
             res.header('x-auth', token).send(user);
         });
     }).catch((e)=>{
-        res.status(400).send();
+        
 
     });
 
