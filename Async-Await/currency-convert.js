@@ -26,7 +26,11 @@ const getCountries = async (currencyCode)=>{
 
 };
 
-getCountries('USD').then((countries)=>{
+const convertCurrency = (from,to,amount) => {
+
+};
+
+getCountries('EUR').then((countries)=>{
     console.log(countries);
 });
 
