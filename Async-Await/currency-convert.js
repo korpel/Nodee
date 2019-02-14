@@ -64,7 +64,7 @@ const doWork = async ()=>{
         const result = await add(12,13)
         return result
     } catch (e) {
-
+        return 10
     }
   
 };
