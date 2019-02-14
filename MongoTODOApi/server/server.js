@@ -72,8 +72,6 @@ app.get('/todos/:id',authenticate,(req, res)=>{
 });
 
 app.delete('/todos/:id', authenticate, async (req, res) => {
-    
-
     try {
         const id = req.params.id;
         if (!ObjectID.isValid(id)) {
@@ -90,18 +88,6 @@ app.delete('/todos/:id', authenticate, async (req, res) => {
     } catch (e) {
         res.status(400).send()
     }
-
-    Todo.findOneAndRemove({
-        _id: id,
-        _creator: req.user._id
-    }).then((todo) => {
-        if (!todo) {
-            return res.status(404).send();
-        }
-        res.send({todo});
-    }).catch((e)=>{
-        
-    });
 });
 
 app.patch('/todos/:id', authenticate,  (req,res) => {
