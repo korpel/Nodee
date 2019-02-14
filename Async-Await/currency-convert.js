@@ -38,7 +38,7 @@ const getCountries = async (currencyCode)=>{
 const convertCurrency = async (from,to,amount) => {
     const rate = await getExhangeRate(from,to);
     const countries = await getCountries(to);
-
+    convertedAmount = (amount*rate).toFixed(2);
 };
 
 convertCurrency('USD', 'USD', 20).then((message)=>{
