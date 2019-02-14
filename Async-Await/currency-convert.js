@@ -44,6 +44,8 @@ const convertCurrency = async (from,to,amount) => {
 
 convertCurrency('USD', 'CAD', 20).then((message)=>{
     console.log(message);
+}).catch((e)=>{
+    console.log(e.message);
 });
 
 
