@@ -14,7 +14,7 @@ const axios = require('axios');
 const getExhangeRate =  async (from, to) => {
 
     try {
-        const response = await axios.get(url);
+        const response = await axios.get(ur);
         const euro = 1 / response.data.rates[from];
         const rate = euro * response.data.rates[to];
         return rate;
