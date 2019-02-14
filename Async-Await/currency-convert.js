@@ -26,14 +26,19 @@ const getCountries = async (currencyCode)=>{
 
 };
 
-const convertCurrency = (from,to,amount) => {
-    let convertedAmount;
-    return getExhangeRate(from,to).then((rate)=> {
-        convertedAmount = (amount*rate).toFixed(2);
-        return getCountries(to)
-    }).then((countries)=>{
-        return `${amount} ${from} is worth ${convertedAmount} ${to}. You can spend it in the following countries ${countries.join(', ')}`;
-    });
+// const convertCurrency = (from,to,amount) => {
+//     let convertedAmount;
+//     return getExhangeRate(from,to).then((rate)=> {
+//         convertedAmount = (amount*rate).toFixed(2);
+//         return getCountries(to)
+//     }).then((countries)=>{
+//         return `${amount} ${from} is worth ${convertedAmount} ${to}. You can spend it in the following countries ${countries.join(', ')}`;
+//     });
+// };
+const convertCurrency = async (from,to,amount) => {
+    const rate = await getExhangeRate(from,to);
+    const countries = await getCountries(to);
+
 };
 
 convertCurrency('USD', 'USD', 20).then((message)=>{
