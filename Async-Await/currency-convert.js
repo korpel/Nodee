@@ -17,6 +17,11 @@ const getExhangeRate =  async (from, to) => {
         const response = await axios.get(url);
         const euro = 1 / response.data.rates[from];
         const rate = euro * response.data.rates[to];
+
+        if (isNaN(rate)) {
+            throw new Error();
+        }
+
         return rate;
     } catch (e) {
         throw new Error(`Unable to get exchange rate from ${from} and ${to}.`);
