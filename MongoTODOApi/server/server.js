@@ -71,7 +71,7 @@ app.get('/todos/:id',authenticate,(req, res)=>{
     });
 });
 
-app.delete('/todos/:id', authenticate, (req, res) => {
+app.delete('/todos/:id', authenticate, async (req, res) => {
     var id = req.params.id;
     if (!ObjectID.isValid(id)) {
         return res.status(404).send();
